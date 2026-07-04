@@ -813,12 +813,28 @@ ul,ol{margin:0;padding:0;list-style:none;}
   var paused = false;
   var resumeTimer = null;
   var lastTime = null;
+  var originalItems = Array.prototype.slice.call(track.children);
+  var firstClone = null;
+
+  originalItems.forEach(function(item, index){
+    var clone = item.cloneNode(true);
+    clone.setAttribute('aria-hidden', 'true');
+    track.appendChild(clone);
+    if (index === 0) firstClone = clone;
+  });
 
   function computeSetWidth(){
-    setWidth = track.scrollWidth / 2;
+    if (firstClone && originalItems[0]) {
+      setWidth = firstClone.offsetLeft - originalItems[0].offsetLeft;
+    } else {
+      setWidth = track.scrollWidth;
+    }
+    offset = wrap(offset);
+    applyTransform();
   }
-  computeSetWidth();
+  window.addEventListener('load', computeSetWidth);
   window.addEventListener('resize', computeSetWidth);
+  computeSetWidth();
 
   function wrap(v){
     if (!setWidth) return v;
