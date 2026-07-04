@@ -93,23 +93,6 @@ ul,ol{margin:0;padding:0;list-style:none;}
 .hero-media-wrap{position:relative;width:100%;max-width:var(--max-w);margin:0 auto;padding:0 20px;}
 .hero-media-wrap img{width:100%;height:auto;display:block;}
 .hero-cta-overlay{position:absolute;left:5.5%;top:59%;box-shadow:0 6px 18px rgba(0,0,0,.28);}
-.hero-copy-overlay{position:absolute;left:5.4%;top:8.6%;width:35%;z-index:2;color:#fff;text-shadow:0 2px 5px rgba(0,0,0,.6);}
-.hero-copy-badge{display:inline-flex;align-items:center;padding:8px 18px;border-radius:999px;background:#07866f;font-weight:800;font-size:clamp(.82rem,1.2vw,1.05rem);line-height:1;margin-bottom:18px;}
-.hero-copy-main{display:block;color:#fff;font-weight:900;font-size:clamp(2.15rem,3.55vw,4rem);line-height:1.18;letter-spacing:0;-webkit-text-stroke:1.4px #0b554d;text-shadow:0 3px 0 #0b554d,0 6px 14px rgba(0,0,0,.34);}
-.hero-copy-lead{display:block;margin-top:16px;font-weight:900;font-size:clamp(.86rem,1.25vw,1.25rem);line-height:1.4;color:#fff;text-shadow:0 2px 4px rgba(0,0,0,.7);}
-.hero-copy-pills{display:flex;gap:14px;margin-top:24px;flex-wrap:wrap;}
-.hero-copy-pill{display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:12px 22px;border:3px solid currentColor;border-radius:16px;background:rgba(255,255,255,.95);font-weight:900;font-size:clamp(.92rem,1.22vw,1.25rem);text-shadow:none;box-shadow:0 5px 16px rgba(0,0,0,.14);}
-.hero-copy-pill.green{color:#07866f;}
-.hero-copy-pill.red{color:#e24b3f;}
-.hero-brand-overlay{position:absolute;right:11.8%;top:8.5%;z-index:2;width:22%;text-align:center;color:#111;text-shadow:0 2px 0 #fff,0 4px 8px rgba(0,0,0,.25);font-weight:900;}
-.hero-brand-tel{display:block;font-family:Georgia,serif;font-size:clamp(2rem,4.1vw,4.4rem);line-height:.9;transform:rotate(-12deg);letter-spacing:.04em;}
-.hero-brand-name{display:block;font-size:clamp(1.6rem,3.2vw,3.5rem);line-height:1.05;}
-.hero-brand-flower{display:block;color:#e989b9;font-size:clamp(2.4rem,4vw,4.7rem);line-height:.8;}
-.hero-right-copy{position:absolute;right:9.5%;top:41%;z-index:2;width:31%;text-align:center;color:#fff;font-weight:900;font-size:clamp(1.6rem,2.65vw,3rem);line-height:1.28;-webkit-text-stroke:1.2px #0b554d;text-shadow:0 3px 0 #0b554d,0 6px 14px rgba(0,0,0,.28);}
-.hero-right-pills{display:flex;gap:18px;justify-content:center;margin-top:42px;}
-.hero-right-pill{display:inline-flex;align-items:center;justify-content:center;min-width:190px;min-height:58px;padding:12px 26px;border-radius:14px;color:#fff;font-size:clamp(1rem,1.55vw,1.5rem);-webkit-text-stroke:0;text-shadow:none;box-shadow:0 6px 16px rgba(0,0,0,.18);}
-.hero-right-pill.green{background:#07866f;}
-.hero-right-pill.red{background:#e24b3f;}
 .hero-text-mobile{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;}
 .hero-text-mobile h1{font-size:1.4rem;color:var(--navy);}
 .hero-text-mobile .hero-lead{font-size:.95rem;color:var(--text-light);}
@@ -321,16 +304,8 @@ ul,ol{margin:0;padding:0;list-style:none;}
   .btn-phone .btn-text{display:none;}
 
   .hero-cta-overlay{display:none;}
-  .hero-copy-overlay{left:34px;top:14px;width:62%;}
-  .hero-copy-badge{padding:6px 13px;font-size:.75rem;margin-bottom:8px;}
-  .hero-copy-main{font-size:clamp(1.55rem,7.6vw,2.35rem);line-height:1.13;-webkit-text-stroke:1px #0b554d;text-shadow:0 2px 0 #0b554d,0 4px 10px rgba(0,0,0,.34);}
-  .hero-copy-lead{margin-top:8px;font-size:clamp(.72rem,3.1vw,.95rem);line-height:1.35;}
-  .hero-copy-pills{gap:7px;margin-top:10px;}
-  .hero-copy-pill{min-height:32px;padding:7px 10px;border-width:2px;border-radius:10px;font-size:.8rem;}
-  .hero-brand-overlay{display:none;}
-  .hero-right-copy{display:none;}
-  .hero-media-wrap{max-width:var(--max-w);padding:0 20px;overflow:visible;}
-  .hero-media-wrap img{width:100%;max-width:100%;margin-left:0;}
+  .hero-media-wrap{max-width:none;padding:0;overflow:hidden;}
+  .hero-media-wrap img{width:165%;max-width:none;margin-left:0;}
   .hero-text-mobile{position:static;width:auto;height:auto;padding:24px 20px 4px;margin:0;overflow:visible;clip:auto;white-space:normal;border:0;text-align:center;}
   .hero-text-mobile h1{font-size:1.4rem;}
   .hero-cta-mobile-btn{display:flex;width:calc(100% - 40px);margin:18px 20px 24px;}
@@ -368,10 +343,7 @@ ul,ol{margin:0;padding:0;list-style:none;}
 }
 
 @media (max-width:480px){
-  .hero-copy-overlay{left:26px;top:10px;width:68%;}
-  .hero-copy-main{font-size:clamp(1.38rem,7.9vw,2rem);}
-  .hero-copy-lead{font-size:clamp(.68rem,3vw,.82rem);}
-  .hero-copy-pill{min-height:29px;padding:6px 8px;font-size:.72rem;}
+  .hero-media-wrap img{width:185%;}
   .hero h1{font-size:1.35rem;}
   .section h2{font-size:1.15rem;}
   .case-task-cards{grid-template-columns:1fr;}
@@ -404,28 +376,7 @@ ul,ol{margin:0;padding:0;list-style:none;}
 <!-- 1. ファーストビュー -->
 <section class="hero">
   <div class="hero-media-wrap">
-    <img src="../assets/images/hero-main-clean.jpg?v=20260704" alt="遺品整理・片付け 最短即日で丁寧に対応。大切な想い出をまごころ込めて整理します。株式会社アートさくら" width="1672" height="941" loading="eager">
-    <div class="hero-copy-overlay" aria-hidden="true">
-      <span class="hero-copy-badge">&#x5730;&#x57DF;&#x5BC6;&#x7740;</span>
-      <span class="hero-copy-main">&#x907A;&#x54C1;&#x6574;&#x7406;&#x30FB;&#x7247;&#x4ED8;&#x3051;<br>&#x6700;&#x77ED;&#x5373;&#x65E5;&#x3067;<br>&#x4E01;&#x5BE7;&#x306B;&#x5BFE;&#x5FDC;</span>
-      <span class="hero-copy-lead">&#x5927;&#x5207;&#x306A;&#x60F3;&#x3044;&#x51FA;&#x3092;&#x3001;&#x307E;&#x3054;&#x3053;&#x308D;&#x8FBC;&#x3081;&#x3066;&#x6574;&#x7406;&#x3057;&#x307E;&#x3059;</span>
-      <span class="hero-copy-pills">
-        <span class="hero-copy-pill green">&#x8FFD;&#x52A0;&#x8CBB;&#x7528;&#x306A;&#x3057;</span>
-        <span class="hero-copy-pill red">&#x7121;&#x6599;&#x898B;&#x7A4D;&#x3082;&#x308A;</span>
-      </span>
-    </div>
-    <div class="hero-brand-overlay" aria-hidden="true">
-      <span class="hero-brand-tel">0120</span>
-      <span class="hero-brand-flower">&#x273F;</span>
-      <span class="hero-brand-name">&#x30A2;&#x30FC;&#x30C8;<br>&#x3055;&#x304F;&#x3089;</span>
-    </div>
-    <div class="hero-right-copy" aria-hidden="true">
-      <span>&#x5927;&#x5207;&#x306A;&#x304A;&#x54C1;&#x3092;<br>&#x4E00;&#x3064;&#x3072;&#x3068;&#x3064;&#x78BA;&#x8A8D;</span>
-      <span class="hero-right-pills">
-        <span class="hero-right-pill green">&#x79D8;&#x5BC6;&#x53B3;&#x5B88;</span>
-        <span class="hero-right-pill red">&#x660E;&#x6717;&#x4F1A;&#x8A08;</span>
-      </span>
-    </div>
+    <img src="../assets/images/hero-main.jpg" alt="遺品整理・片付け 最短即日で丁寧に対応。大切な想い出をまごころ込めて整理します。株式会社アートさくら" width="1672" height="941" loading="eager">
     <a href="tel:0454826608" class="btn btn-cta-red btn-large hero-cta-overlay">
       <span class="btn-icon" aria-hidden="true">&#9742;</span>今すぐ相談する
     </a>
