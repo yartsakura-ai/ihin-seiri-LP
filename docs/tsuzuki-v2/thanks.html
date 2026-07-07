@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex">
+<title>お問い合わせありがとうございました｜株式会社アートさくら</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#0F2A5C;
+  --sky:#2E86FF;
+  --sky-dark:#1655B8;
+  --sky-pale:#E3F0FF;
+  --sakura:#FF6FA8;
+  --text:#1F2530;
+  --text-light:#5B6472;
+  --line:#E1E6ED;
+  --radius:12px;
+}
+*{box-sizing:border-box;}
+body{
+  margin:0;font-family:'Noto Sans JP',sans-serif;color:var(--text);
+  background:linear-gradient(135deg,var(--sky-pale) 0%, #fff 100%);
+  line-height:1.8;-webkit-font-smoothing:antialiased;
+  min-height:100vh;display:flex;align-items:center;justify-content:center;padding:24px;
+}
+.thanks-card{
+  background:#fff;border-radius:var(--radius);padding:48px 36px;
+  max-width:480px;width:100%;text-align:center;
+  box-shadow:0 20px 44px rgba(15,42,92,.14);border:1px solid var(--line);
+}
+.thanks-icon{
+  width:64px;height:64px;border-radius:50%;background:var(--sky-pale);
+  display:flex;align-items:center;justify-content:center;margin:0 auto 20px;font-size:2rem;
+}
+h1{color:var(--navy);font-size:1.3rem;margin:0 0 16px;}
+p{color:var(--text-light);margin:0 0 8px;font-size:.96rem;}
+.thanks-buttons{display:flex;flex-direction:column;gap:12px;margin-top:28px;}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:8px;
+  padding:14px 22px;border-radius:8px;font-weight:700;font-size:1rem;
+  text-decoration:none;border:2px solid transparent;
+}
+.btn-primary{background:var(--sky);color:#fff;}
+.btn-outline{background:#fff;color:var(--navy);border-color:var(--navy);}
+</style>
+</head>
+<body>
+  <div class="thanks-card">
+    <div class="thanks-icon" aria-hidden="true">&#9989;</div>
+    <h1>お問い合わせありがとうございました</h1>
+    <p>内容を確認のうえ、担当者よりご連絡いたします。</p>
+    <p>お急ぎの場合はお電話でもご連絡ください。</p>
+    <div class="thanks-buttons">
+      <a href="tel:0454826608" class="btn btn-primary"><span aria-hidden="true">&#9742;</span>045-482-6608 に電話する</a>
+      <a href="index.html" class="btn btn-outline">トップページに戻る</a>
+    </div>
+  </div>
+</body>
+</html>
