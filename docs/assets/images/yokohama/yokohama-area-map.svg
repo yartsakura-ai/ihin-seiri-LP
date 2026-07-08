@@ -1,0 +1,121 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 400" role="img" aria-labelledby="title desc">
+  <title id="title">横浜市18区対応エリア図</title>
+  <desc id="desc">みなとみらいと横浜港の背景を薄く入れ、横浜市都筑区池辺町の神奈川本社から横浜市内18区へ対応することを示すエリア図</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0C1D33"/>
+      <stop offset="0.55" stop-color="#132A47"/>
+      <stop offset="1" stop-color="#1B3A5F"/>
+    </linearGradient>
+    <linearGradient id="panel" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.96"/>
+      <stop offset="1" stop-color="#EEF3F8" stop-opacity="0.94"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="12" stdDeviation="12" flood-color="#06111F" flood-opacity="0.28"/>
+    </filter>
+    <filter id="soft" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur stdDeviation="0.25"/>
+    </filter>
+  </defs>
+
+  <rect width="500" height="400" rx="18" fill="url(#bg)"/>
+
+  <!-- 横浜港の水面 -->
+  <g opacity="0.18" stroke="#C9A24B" fill="none">
+    <path d="M0 318 Q55 304 110 318 T220 318 T330 318 T440 318 T550 318" stroke-width="2"/>
+    <path d="M0 352 Q62 340 124 352 T248 352 T372 352 T496 352" stroke-width="1.4"/>
+    <path d="M0 374 Q75 365 150 374 T300 374 T450 374" stroke-width="1"/>
+  </g>
+
+  <!-- 薄いみなとみらい線画 -->
+  <g opacity="0.22" stroke="#D9E5F2" fill="none" stroke-linejoin="round" stroke-linecap="round" filter="url(#soft)">
+    <path d="M34 286 H466" stroke-width="1.3"/>
+    <!-- ランドマークタワー風 -->
+    <path d="M70 286 L82 132 L122 132 L136 286 Z" stroke-width="2"/>
+    <path d="M84 132 L102 92 L122 132" stroke-width="1.3"/>
+    <line x1="92" y1="150" x2="92" y2="286" stroke-width="0.8"/>
+    <line x1="106" y1="150" x2="106" y2="286" stroke-width="0.8"/>
+    <line x1="120" y1="150" x2="120" y2="286" stroke-width="0.8"/>
+    <!-- ビル群 -->
+    <path d="M150 286 V184 H184 V286" stroke-width="1.5"/>
+    <path d="M196 286 V206 H230 V286" stroke-width="1.5"/>
+    <path d="M240 286 V172 H270 V286" stroke-width="1.5"/>
+    <path d="M282 286 V218 H314 V286" stroke-width="1.5"/>
+    <!-- 観覧車風 -->
+    <circle cx="374" cy="205" r="56" stroke-width="2"/>
+    <circle cx="374" cy="205" r="42" stroke-width="1"/>
+    <line x1="374" y1="149" x2="374" y2="261" stroke-width="0.8"/>
+    <line x1="318" y1="205" x2="430" y2="205" stroke-width="0.8"/>
+    <line x1="334" y1="165" x2="414" y2="245" stroke-width="0.8"/>
+    <line x1="414" y1="165" x2="334" y2="245" stroke-width="0.8"/>
+    <path d="M344 286 L374 211 L404 286" stroke-width="1.6"/>
+    <!-- 客船/港のライン -->
+    <path d="M330 300 H440 L420 318 H352 Z" stroke-width="1.4"/>
+  </g>
+
+  <!-- 金色の月と鳥 -->
+  <g opacity="0.52">
+    <circle cx="416" cy="68" r="26" fill="#C9A24B"/>
+    <circle cx="405" cy="60" r="23" fill="#132A47" opacity="0.42"/>
+  </g>
+  <g stroke="#D9E5F2" stroke-width="1.7" fill="none" opacity="0.72" stroke-linecap="round">
+    <path d="M52 104 q8 -7 16 0 q8 -7 16 0"/>
+    <path d="M132 82 q6 -5 12 0 q6 -5 12 0"/>
+    <path d="M432 132 q6 -5 12 0 q6 -5 12 0"/>
+  </g>
+
+  <!-- 白い情報パネル -->
+  <g transform="translate(34 28)">
+    <rect x="0" y="0" width="432" height="344" rx="18" fill="url(#panel)" filter="url(#shadow)"/>
+    <rect x="0.5" y="0.5" width="431" height="343" rx="17.5" fill="none" stroke="#DDE2E9"/>
+
+    <text x="32" y="48" font-family="Noto Sans JP, sans-serif" font-size="15" font-weight="700" fill="#B08D3F" letter-spacing="2">YOKOHAMA AREA</text>
+    <text x="32" y="82" font-family="Noto Serif JP, serif" font-size="28" font-weight="700" fill="#132A47">横浜市18区対応</text>
+    <text x="32" y="110" font-family="Noto Sans JP, sans-serif" font-size="13" fill="#5C6674">都筑区池辺町の神奈川本社から市内各区へ</text>
+
+    <g transform="translate(34 140)">
+      <path d="M186 62 C146 30 95 40 72 78 C49 116 70 170 116 180 C155 189 182 166 205 134 C232 96 226 76 186 62Z" fill="#EAF0F6" stroke="#C5D0DD" stroke-width="2"/>
+      <path d="M190 46 C224 54 258 82 267 122 C276 164 253 206 211 223 C172 239 130 224 111 194" fill="none" stroke="#C5D0DD" stroke-width="2" stroke-linecap="round"/>
+      <path d="M266 122 C296 122 322 142 332 170 C343 202 327 233 297 246" fill="none" stroke="#C5D0DD" stroke-width="2" stroke-linecap="round"/>
+
+      <g stroke="#B08D3F" stroke-width="2" opacity="0.9">
+        <line x1="177" y1="126" x2="114" y2="73"/>
+        <line x1="177" y1="126" x2="160" y2="58"/>
+        <line x1="177" y1="126" x2="236" y2="86"/>
+        <line x1="177" y1="126" x2="231" y2="168"/>
+        <line x1="177" y1="126" x2="118" y2="164"/>
+      </g>
+
+      <g>
+        <circle cx="177" cy="126" r="30" fill="#132A47"/>
+        <circle cx="177" cy="126" r="22" fill="#B08D3F" opacity="0.18"/>
+        <text x="177" y="121" text-anchor="middle" font-family="Noto Sans JP, sans-serif" font-size="12" font-weight="700" fill="#FFFFFF">神奈川</text>
+        <text x="177" y="138" text-anchor="middle" font-family="Noto Sans JP, sans-serif" font-size="12" font-weight="700" fill="#FFFFFF">本社</text>
+      </g>
+
+      <g font-family="Noto Sans JP, sans-serif" font-size="12" font-weight="700">
+        <g transform="translate(72 48)"><rect width="82" height="32" rx="16" fill="#FFFFFF" stroke="#B08D3F"/><text x="41" y="21" text-anchor="middle" fill="#132A47">青葉区</text></g>
+        <g transform="translate(126 22)"><rect width="82" height="32" rx="16" fill="#FFFFFF" stroke="#B08D3F"/><text x="41" y="21" text-anchor="middle" fill="#132A47">都筑区</text></g>
+        <g transform="translate(218 60)"><rect width="82" height="32" rx="16" fill="#FFFFFF" stroke="#B08D3F"/><text x="41" y="21" text-anchor="middle" fill="#132A47">港北区</text></g>
+        <g transform="translate(212 154)"><rect width="82" height="32" rx="16" fill="#FFFFFF" stroke="#B08D3F"/><text x="41" y="21" text-anchor="middle" fill="#132A47">神奈川区</text></g>
+        <g transform="translate(70 148)"><rect width="82" height="32" rx="16" fill="#FFFFFF" stroke="#B08D3F"/><text x="41" y="21" text-anchor="middle" fill="#132A47">緑区</text></g>
+      </g>
+    </g>
+
+    <g transform="translate(292 138)">
+      <rect x="0" y="0" width="108" height="150" rx="12" fill="#132A47"/>
+      <text x="54" y="28" text-anchor="middle" font-family="Noto Sans JP, sans-serif" font-size="12" font-weight="700" fill="#C9A24B">重点対応</text>
+      <text x="54" y="53" text-anchor="middle" font-family="Noto Serif JP, serif" font-size="20" font-weight="700" fill="#FFFFFF">横浜北部</text>
+      <line x1="20" y1="70" x2="88" y2="70" stroke="#C9A24B" stroke-width="1" opacity="0.7"/>
+      <text x="54" y="96" text-anchor="middle" font-family="Noto Sans JP, sans-serif" font-size="12" fill="#D9E5F2">都筑区・青葉区</text>
+      <text x="54" y="118" text-anchor="middle" font-family="Noto Sans JP, sans-serif" font-size="12" fill="#D9E5F2">港北区・緑区</text>
+      <text x="54" y="139" text-anchor="middle" font-family="Noto Sans JP, sans-serif" font-size="11" fill="#B9C6D8">市内18区へ対応</text>
+    </g>
+
+    <g transform="translate(32 302)">
+      <circle cx="8" cy="8" r="4" fill="#B08D3F"/>
+      <text x="22" y="13" font-family="Noto Sans JP, sans-serif" font-size="12" fill="#5C6674">マンション・戸建て・空き家・施設入居前後の整理までご相談ください</text>
+    </g>
+  </g>
+</svg>

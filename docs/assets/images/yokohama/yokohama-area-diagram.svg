@@ -1,0 +1,57 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 400" role="img" aria-labelledby="title desc">
+  <title id="title">横浜市18区対応エリア図</title>
+  <desc id="desc">都筑区池辺町の神奈川本社を起点に、都筑区、青葉区、港北区、緑区など横浜市内18区へ対応することを示す図</desc>
+  <defs>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="14" stdDeviation="14" flood-color="#06111F" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+  
+  
+
+  <rect x="22" y="18" width="302" height="108" rx="14" fill="#FFFFFF" fill-opacity="0.58" filter="url(#shadow)"/><text x="36" y="50" font-family="Noto Sans JP, sans-serif" font-size="15" font-weight="700" fill="#B08D3F" letter-spacing="2">YOKOHAMA AREA</text>
+  <text x="36" y="86" font-family="Noto Serif JP, serif" font-size="30" font-weight="700" fill="#132A47">横浜市18区対応</text>
+  <text x="36" y="114" font-family="Noto Sans JP, sans-serif" font-size="13" fill="#5C6674">都筑区池辺町の神奈川本社から市内各区へ</text>
+
+  <g transform="translate(-8 162)">
+    <path d="M190 62 C150 30 98 40 74 78 C50 116 71 170 118 181 C157 190 185 166 208 134 C235 96 230 76 190 62Z" fill="#FFFFFF" fill-opacity="0.28" stroke="#C5D0DD" stroke-width="2"/>
+    <path d="M194 46 C228 54 262 82 271 122 C281 164 258 207 215 224 C175 240 132 225 113 194" fill="none" stroke="#C5D0DD" stroke-width="2" stroke-linecap="round"/>
+    <path d="M270 122 C301 122 327 142 337 171 C348 203 331 234 301 247" fill="none" stroke="#C5D0DD" stroke-width="2" stroke-linecap="round"/>
+
+    <g stroke="#B08D3F" stroke-width="2.2" opacity="0.9">
+      <line x1="180" y1="127" x2="116" y2="73"/>
+      <line x1="180" y1="127" x2="163" y2="58"/>
+      <line x1="180" y1="127" x2="226" y2="102"/>
+      <line x1="180" y1="127" x2="235" y2="168"/>
+      <line x1="180" y1="127" x2="120" y2="164"/>
+    </g>
+
+    <circle cx="180" cy="127" r="32" fill="#132A47"/>
+    <circle cx="180" cy="127" r="23" fill="#B08D3F" opacity="0.18"/>
+    <text x="180" y="122" text-anchor="middle" font-family="Noto Sans JP, sans-serif" font-size="12" font-weight="700" fill="#FFFFFF">神奈川</text>
+    <text x="180" y="140" text-anchor="middle" font-family="Noto Sans JP, sans-serif" font-size="12" font-weight="700" fill="#FFFFFF">本社</text>
+
+    <g font-family="Noto Sans JP, sans-serif" font-size="12" font-weight="700">
+      <g transform="translate(72 48)"><rect width="86" height="34" rx="17" fill="#FFFFFF" fill-opacity="0.84" stroke="#B08D3F" stroke-width="1.4"/><text x="43" y="22" text-anchor="middle" fill="#132A47">青葉区</text></g>
+      <g transform="translate(126 20)"><rect width="86" height="34" rx="17" fill="#FFFFFF" fill-opacity="0.84" stroke="#B08D3F" stroke-width="1.4"/><text x="43" y="22" text-anchor="middle" fill="#132A47">都筑区</text></g>
+      <g transform="translate(204 58)"><rect width="86" height="34" rx="17" fill="#FFFFFF" fill-opacity="0.84" stroke="#B08D3F" stroke-width="1.4"/><text x="43" y="22" text-anchor="middle" fill="#132A47">港北区</text></g>
+      <g transform="translate(216 154)"><rect width="86" height="34" rx="17" fill="#FFFFFF" fill-opacity="0.84" stroke="#B08D3F" stroke-width="1.4"/><text x="43" y="22" text-anchor="middle" fill="#132A47">神奈川区</text></g>
+      <g transform="translate(72 150)"><rect width="86" height="34" rx="17" fill="#FFFFFF" fill-opacity="0.84" stroke="#B08D3F" stroke-width="1.4"/><text x="43" y="22" text-anchor="middle" fill="#132A47">緑区</text></g>
+    </g>
+  </g>
+
+  <g transform="translate(338 216)">
+    <rect x="0" y="0" width="108" height="150" rx="12" fill="#132A47"/>
+    <text x="54" y="28" text-anchor="middle" font-family="Noto Sans JP, sans-serif" font-size="12" font-weight="700" fill="#C9A24B">重点対応</text>
+    <text x="54" y="53" text-anchor="middle" font-family="Noto Serif JP, serif" font-size="20" font-weight="700" fill="#FFFFFF">横浜北部</text>
+    <line x1="20" y1="70" x2="88" y2="70" stroke="#C9A24B" stroke-width="1" opacity="0.7"/>
+    <text x="54" y="96" text-anchor="middle" font-family="Noto Sans JP, sans-serif" font-size="12" fill="#D9E5F2">都筑区・青葉区</text>
+    <text x="54" y="118" text-anchor="middle" font-family="Noto Sans JP, sans-serif" font-size="12" fill="#D9E5F2">港北区・緑区</text>
+    <text x="54" y="139" text-anchor="middle" font-family="Noto Sans JP, sans-serif" font-size="11" fill="#B9C6D8">市内18区へ対応</text>
+  </g>
+</svg>
+
+
+
+
+
