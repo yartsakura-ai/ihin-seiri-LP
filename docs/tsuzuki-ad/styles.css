@@ -49,28 +49,38 @@ ul,ol{margin:0;padding:0;list-style:none;}
 }
 .btn:hover{opacity:.88;transform:translateY(-1px);}
 .btn-line,.btn-gold,.hero-cta .btn-outline,.final-cta-buttons .btn-outline{
-  animation:ctaFloat 2.4s ease-in-out infinite, ctaPulse 2.4s ease-in-out infinite;
+  animation:ctaBounce 1.35s ease-in-out infinite, ctaPulse 1.35s ease-in-out infinite;
+}
+.btn-line::before,.btn-gold::before,.hero-cta .btn-outline::before,.final-cta-buttons .btn-outline::before{
+  content:"";position:absolute;inset:-5px;z-index:-1;border-radius:inherit;pointer-events:none;
+  border:2px solid rgba(201,162,75,.34);
+  animation:ctaRing 1.35s ease-out infinite;
 }
 .btn-line::after,.btn-gold::after,.hero-cta .btn-outline::after,.final-cta-buttons .btn-outline::after{
   content:"";position:absolute;inset:-40% auto -40% -60%;z-index:1;pointer-events:none;
   width:44%;transform:skewX(-18deg);
-  background:linear-gradient(90deg,transparent,rgba(255,255,255,.34),transparent);
-  animation:ctaShine 3.2s ease-in-out infinite;
+  background:linear-gradient(90deg,transparent,rgba(255,255,255,.46),transparent);
+  animation:ctaShine 1.8s ease-in-out infinite;
 }
-@keyframes ctaFloat{
-  0%,100%{transform:translateY(0);}
-  50%{transform:translateY(-2px);}
+@keyframes ctaBounce{
+  0%,100%{transform:translateY(0) scale(1);}
+  45%{transform:translateY(-5px) scale(1.035);}
 }
 @keyframes ctaPulse{
-  0%,100%{box-shadow:0 6px 16px rgba(176,141,63,.22);}
-  50%{box-shadow:0 10px 24px rgba(176,141,63,.36),0 0 0 6px rgba(201,162,75,.12);}
+  0%,100%{box-shadow:0 7px 16px rgba(176,141,63,.26);}
+  45%{box-shadow:0 14px 28px rgba(176,141,63,.46),0 0 0 9px rgba(201,162,75,.18);}
+}
+@keyframes ctaRing{
+  0%{opacity:.75;transform:scale(.98);}
+  100%{opacity:0;transform:scale(1.18);}
 }
 @keyframes ctaShine{
-  0%,45%{left:-60%;}
-  70%,100%{left:120%;}
+  0%{left:-60%;}
+  68%,100%{left:125%;}
 }
 @media (prefers-reduced-motion:reduce){
   .btn-line,.btn-gold,.hero-cta .btn-outline,.final-cta-buttons .btn-outline,
+  .btn-line::before,.btn-gold::before,.hero-cta .btn-outline::before,.final-cta-buttons .btn-outline::before,
   .btn-line::after,.btn-gold::after,.hero-cta .btn-outline::after,.final-cta-buttons .btn-outline::after{
     animation:none;
   }
