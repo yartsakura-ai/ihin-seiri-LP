@@ -249,6 +249,30 @@ ul,ol{margin:0;padding:0;list-style:none;}
 .strip-item .strip-value{font-weight:900;font-size:1rem;color:#fff;}
 .strip-item .strip-value .gold{color:var(--gold-bright);}
 
+/* 信頼バッジ */
+.trust-badges{
+  position:relative;z-index:2;background:var(--cream);
+  padding:22px 0 6px;
+}
+.trust-badges-inner{
+  max-width:var(--max-w);margin:0 auto;padding:0 22px;
+  display:grid;grid-template-columns:repeat(3,1fr);gap:10px;
+}
+.trust-badge{
+  display:flex;align-items:center;gap:9px;min-width:0;
+  background:#fff;border:1px solid var(--line);border-radius:10px;
+  padding:11px 14px;font-size:.82rem;font-weight:700;color:var(--navy);
+  box-shadow:0 2px 8px rgba(27,58,102,.05);
+  line-height:1.35;
+}
+.trust-badge-icon{
+  flex:0 0 24px;width:24px;height:24px;border-radius:50%;
+  background:var(--gold-pale);color:var(--gold);
+  display:flex;align-items:center;justify-content:center;
+  font-size:.78rem;font-weight:900;
+}
+.badge-text-short{display:none;}
+
 /* ---------- よくある悩み ---------- */
 .fit-list{max-width:760px;margin:0 auto;display:grid;gap:12px;}
 .fit-list li{
@@ -376,6 +400,25 @@ ul,ol{margin:0;padding:0;list-style:none;}
 .price-flow-steps li:not(:last-child)::after{
   content:"›";position:absolute;right:-19px;top:50%;transform:translateY(-50%);
   color:var(--gold);font-weight:900;font-size:1.1rem;
+}
+
+.safety-note{
+  max-width:720px;margin:24px auto 0;text-align:left;
+  background:#fff;border:1px solid var(--line);border-radius:var(--radius);
+  padding:22px 24px;box-shadow:0 4px 14px rgba(27,58,102,.06);
+}
+.safety-note-head{display:flex;align-items:center;gap:12px;margin-bottom:12px;}
+.safety-note-icon{
+  flex:0 0 34px;width:34px;height:34px;border-radius:50%;
+  background:var(--gold-pale);color:var(--gold);
+  display:flex;align-items:center;justify-content:center;font-size:1rem;font-weight:900;
+}
+.safety-note h3{font-size:1.02rem;margin:0;color:var(--navy);}
+.safety-note p{font-size:.9rem;color:var(--text);margin:0 0 .9em;line-height:1.9;}
+.safety-note p:last-of-type{margin-bottom:0;}
+.safety-note .safety-note-small{
+  display:block;font-size:.8rem;color:var(--text-light);margin-top:.9em;
+  padding-top:.9em;border-top:1px dashed var(--line);line-height:1.8;
 }
 .price-note{max-width:760px;margin:28px auto 0;font-size:.92rem;color:var(--text-light);}
 .price-cta{
@@ -526,6 +569,7 @@ ul,ol{margin:0;padding:0;list-style:none;}
   .price-grid{grid-template-columns:repeat(2,1fr);}
   .reuse-wrap,.consult-band,.sorting-band{grid-template-columns:1fr;gap:24px;}
   .hero-grid{grid-template-columns:1fr;gap:28px;}
+  .trust-badges-inner{grid-template-columns:repeat(2,1fr);}
 }
 
 @media (max-width:640px){
@@ -550,10 +594,11 @@ ul,ol{margin:0;padding:0;list-style:none;}
   .hero-comparison img{aspect-ratio:1/1;}
   .hero-comparison p{font-size:.78rem;line-height:1.55;}
   .compare-label{top:7px;left:7px;min-height:24px;padding:3px 8px;font-size:.66rem;}
-  .hero-eyebrow{margin-bottom:10px;}
-  .hero h1{font-size:1.4rem;line-height:1.48;margin-bottom:10px;}
+  .hero-copy{text-align:center;}
+  .hero-eyebrow{margin:0 auto 10px;justify-content:center;}
+  .hero h1{font-size:1.4rem;line-height:1.48;margin:0 auto 10px;max-width:22rem;}
   .hero h1 .accent{font-size:1em;letter-spacing:0;}
-  .hero-sub{font-size:.93rem;margin-bottom:14px;}
+  .hero-sub{font-size:.93rem;margin:0 auto 14px;max-width:22rem;}
   .workshop-copy .big{font-size:1.32rem;}
   .hero-points{flex-direction:column;align-items:center;margin:0 0 16px;}
   .hero-price-link{width:100%;max-width:none;margin:0 0 18px;padding:11px 16px;}
@@ -564,6 +609,12 @@ ul,ol{margin:0;padding:0;list-style:none;}
   .strip-item{padding:2px 4px;}
   .strip-item .strip-label{font-size:.62rem;}
   .strip-item .strip-value{font-size:.85rem;}
+  .trust-badges{padding:16px 0 4px;}
+  .trust-badges-inner{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;padding:0 16px;}
+  .trust-badge{padding:9px 8px;font-size:.74rem;gap:5px;min-width:0;white-space:normal;}
+  .badge-text-full{display:none;}
+  .badge-text-short{display:inline;min-width:0;overflow-wrap:break-word;}
+  .trust-badge-icon{flex-basis:20px;width:20px;height:20px;font-size:.68rem;}
   .can-grid{grid-template-columns:1fr;}
   .price-grid{grid-template-columns:1fr;}
   .price-card .price-now{font-size:1.6rem;}
@@ -571,6 +622,8 @@ ul,ol{margin:0;padding:0;list-style:none;}
     top:9px;right:-30px;padding:2px 30px;font-size:.6rem;letter-spacing:.04em;
   }
   .price-flow{padding:14px 14px;}
+  .safety-note{padding:18px 18px;margin-top:18px;}
+  .safety-note h3{font-size:.96rem;}
   .price-flow-steps{gap:18px;}
   .price-flow-steps li{font-size:.78rem;padding:6px 11px;}
   .price-flow-steps li:not(:last-child)::after{right:-15px;}
