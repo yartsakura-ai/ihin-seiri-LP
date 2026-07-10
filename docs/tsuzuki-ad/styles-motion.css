@@ -219,15 +219,19 @@ ul,ol{margin:0;padding:0;list-style:none;}
   overflow-wrap:anywhere;
 }
 .hero-price-link{
-  display:inline-flex;align-items:center;gap:8px;
-  font-size:.86rem;font-weight:700;color:var(--navy);
-  background:#fff;border:1px solid var(--gold);border-radius:20px;
-  padding:8px 16px;margin:0 0 18px;
-  box-shadow:0 3px 10px rgba(176,141,63,.14);
-  transition:opacity .15s ease, transform .15s ease;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;
+  width:min(100%,360px);max-width:360px;color:var(--navy);text-align:center;
+  background:linear-gradient(180deg,#fff 0%,var(--cream) 100%);
+  border:1px solid var(--gold);border-radius:12px;
+  padding:12px 18px;margin:0 0 18px;
+  box-shadow:0 8px 20px rgba(176,141,63,.16);
+  transition:opacity .15s ease, transform .15s ease, box-shadow .15s ease;
 }
-.hero-price-link:hover{opacity:.85;transform:translateY(-1px);}
-.hero-price-link::after{content:"›";font-weight:900;color:var(--gold);font-size:1.1em;}
+.hero-price-link:hover{opacity:.92;transform:translateY(-1px);box-shadow:0 10px 24px rgba(176,141,63,.22);}
+.price-link-label{font-size:.72rem;font-weight:700;color:var(--text-light);line-height:1.4;}
+.price-link-main{font-size:1.08rem;font-weight:900;color:var(--navy);line-height:1.35;letter-spacing:.01em;}
+.price-link-sub{font-size:.8rem;font-weight:800;color:var(--gold);line-height:1.35;}
+.price-link-sub::after{content:" ›";font-weight:900;}
 .hero-cta{display:flex;flex-wrap:wrap;gap:14px;margin-bottom:12px;}
 .hero-note{font-size:.82rem;color:var(--text-light);}
 
@@ -552,7 +556,8 @@ ul,ol{margin:0;padding:0;list-style:none;}
   .hero-sub{font-size:.93rem;margin-bottom:14px;}
   .workshop-copy .big{font-size:1.32rem;}
   .hero-points{flex-direction:column;align-items:center;margin:0 0 16px;}
-  .hero-price-link{display:inline-flex;width:100%;justify-content:center;margin:0 0 18px;}
+  .hero-price-link{width:100%;max-width:none;margin:0 0 18px;padding:11px 16px;}
+  .price-link-main{font-size:1.03rem;}
   .hero-cta{flex-direction:column;gap:10px;margin-bottom:8px;}
   .hero-cta .btn{width:100%;padding:15px 20px;}
   .strip-inner{grid-template-columns:1fr 1fr 1fr;padding:12px 10px;gap:4px;}
