@@ -45,3 +45,12 @@ Repository Settings
 ```
 
 登録後、IssueやPull Requestで `@claude` とコメントすると、Claude CodeのGitHub Actions連携を使えるようになります。
+
+## biz-kaishu LP（店舗・事業者向け不用品回収）
+
+`docs/biz-kaishu/` に、リサイクルショップ・店舗・倉庫などの事業者向けに、売れ残り在庫や什器の有料回収を案内する広告LPを追加しました。
+
+- 公開予定URL: https://yartsakura-ai.github.io/ihin-seiri-LP/biz-kaishu/
+- 画像: `docs/assets/images/biz-kaishu/`（モザイク処理済みWebP。処理内容は同フォルダの `IMAGE-MANIFEST.md` を参照）
+- 問い合わせ導線: 電話・LINE・メール（メールは `y.artsakura@gmail.com`、独自ドメイン取得後に変更予定）
+- ステータス: 試作段階のため `noindex,nofollow` を設定中。回収サービス関連の許認可情報は正式確認が取れるまでHTMLコメントとして非表示にしています。

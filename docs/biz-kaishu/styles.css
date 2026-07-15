@@ -1,0 +1,781 @@
+/* ============================================================
+   アートさくら 店舗・事業者向け回収LP (biz-kaishu)
+   BtoB / 業務的・迅速・整理された印象
+============================================================ */
+:root{
+  --charcoal:#22272C;
+  --ink:#2B3138;
+  --steel:#5C6770;
+  --line:#D8DDE1;
+  --base:#F4F5F6;
+  --white:#FFFFFF;
+  --brand:#D1487E;        /* アートさくらの桜色を強調用に調整 */
+  --brand-soft:#F7E3EC;
+  --line-green:#06C755;
+  --sans:'Noto Sans JP',"Hiragino Kaku Gothic ProN",Meiryo,sans-serif;
+  --max-w:1080px;
+  --radius:4px;
+}
+
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  margin:0;
+  font-family:var(--sans);
+  color:var(--ink);
+  background:var(--white);
+  line-height:1.9;
+  -webkit-font-smoothing:antialiased;
+  padding-bottom:76px; /* 固定CTA分の余白 */
+}
+img{max-width:100%;height:auto;display:block;}
+a{color:inherit;text-decoration:none;}
+h1,h2,h3{margin:0 0 .6em;line-height:1.4;color:var(--charcoal);}
+h2{font-size:clamp(24px,4.5vw,34px);font-weight:900;letter-spacing:.02em;}
+h3{font-size:clamp(16px,2.6vw,19px);font-weight:700;}
+p{margin:0 0 1em;}
+ul,ol{margin:0;padding:0;list-style:none;}
+figure{margin:0;}
+.container{max-width:var(--max-w);margin:0 auto;padding:0 20px;}
+.section{padding:64px 0;}
+.pc-only{display:none;}
+@media(min-width:768px){.pc-only{display:inline;}}
+
+/* 英字ラベル */
+.en-label{
+  display:block;
+  font-size:12px;
+  font-weight:700;
+  letter-spacing:.22em;
+  color:var(--brand);
+  margin:0 0 6px;
+}
+.en-label-invert{color:#F2A9C6;}
+
+/* ============ ボタン ============ */
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:52px;
+  padding:12px 26px;
+  border-radius:var(--radius);
+  font-weight:700;
+  font-size:15px;
+  line-height:1.4;
+  text-align:center;
+  transition:opacity .15s ease, transform .1s ease;
+}
+.btn:hover,.btn:focus-visible{opacity:.85;}
+.btn:active{transform:translateY(1px);}
+.btn:focus-visible{outline:3px solid var(--brand);outline-offset:2px;}
+.btn-line{background:var(--line-green);color:#fff;}
+.btn-tel{background:var(--charcoal);color:#fff;}
+.btn-header{min-height:40px;padding:8px 16px;font-size:13px;}
+.cta-row{
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+  margin-top:28px;
+}
+.cta-row .btn{flex:1 1 240px;max-width:400px;}
+
+/* ============ ヘッダー ============ */
+.site-header{
+  background:var(--white);
+  border-bottom:1px solid var(--line);
+  position:sticky;
+  top:0;
+  z-index:50;
+}
+.header-inner{
+  max-width:var(--max-w);
+  margin:0 auto;
+  padding:8px 20px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+}
+.header-brand{display:flex;align-items:center;gap:10px;min-width:0;}
+.header-logo{width:auto;height:44px;flex-shrink:0;}
+.header-tag{
+  margin:0;
+  font-size:11px;
+  font-weight:700;
+  color:var(--steel);
+  line-height:1.4;
+}
+.header-contact{display:flex;align-items:center;gap:14px;}
+.header-tel{display:flex;flex-direction:column;line-height:1.3;}
+.header-tel-num{font-size:18px;font-weight:900;color:var(--charcoal);}
+.header-tel-hours{font-size:11px;color:var(--steel);}
+@media(max-width:640px){
+  .header-tag{display:none;}
+  .header-contact .btn-header{display:none;}
+  .header-logo{height:38px;}
+  .header-tel-num{font-size:16px;}
+}
+
+/* ============ ヒーロー ============ */
+.hero{
+  position:relative;
+  overflow:hidden;
+  background:var(--charcoal);
+}
+.hero-media{position:absolute;inset:0;}
+.hero-media img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center 60%;
+}
+.hero-media::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(90deg,rgba(20,23,26,.72) 0%,rgba(20,23,26,.5) 46%,rgba(20,23,26,.18) 100%);
+}
+.hero-body{
+  position:relative;
+  z-index:1;
+  max-width:var(--max-w);
+  margin:0 auto;
+  padding:64px 20px 40px;
+}
+.hero-eyebrow{
+  display:inline-flex;
+  flex-wrap:wrap;
+  align-items:center;
+  gap:10px;
+  margin:0 0 14px;
+  color:#fff;
+  font-size:13px;
+  font-weight:700;
+  background:rgba(0,0,0,.35);
+  border-left:4px solid var(--brand);
+  padding:6px 12px;
+}
+.hero-eyebrow .en-label{display:inline;margin:0;color:#F2A9C6;}
+.hero-title{
+  color:#fff;
+  font-size:clamp(30px,7vw,52px);
+  font-weight:900;
+  letter-spacing:.03em;
+  line-height:1.35;
+  margin-bottom:.4em;
+  text-shadow:0 2px 14px rgba(0,0,0,.45);
+}
+.hero-sub{
+  color:#fff;
+  font-size:clamp(14px,2.4vw,18px);
+  font-weight:500;
+  text-shadow:0 1px 8px rgba(0,0,0,.5);
+  margin-bottom:22px;
+}
+.hero-price{
+  display:inline-flex;
+  flex-direction:column;
+  gap:2px;
+  background:rgba(255,255,255,.94);
+  border-left:5px solid var(--brand);
+  padding:12px 18px;
+  margin-bottom:22px;
+  max-width:100%;
+}
+.hero-price-label{font-size:12px;font-weight:700;color:var(--steel);letter-spacing:.08em;}
+.hero-price-num{font-size:clamp(17px,3vw,22px);font-weight:700;color:var(--charcoal);}
+.hero-price-num strong{font-size:1.35em;font-weight:900;}
+.hero-price-note{font-size:12px;color:var(--steel);line-height:1.6;}
+.hero-cta{display:flex;flex-wrap:wrap;gap:12px;}
+.hero-cta .btn{flex:1 1 240px;max-width:360px;font-size:16px;min-height:56px;}
+.hero-hours{
+  color:#fff;
+  font-size:13px;
+  font-weight:500;
+  margin:14px 0 0;
+  text-shadow:0 1px 6px rgba(0,0,0,.5);
+}
+@media(min-width:768px){
+  .hero-body{padding:96px 20px 64px;}
+}
+
+/* 情報帯 */
+.hero-band{background:var(--charcoal);border-top:1px solid rgba(255,255,255,.15);}
+.hero-band ul{
+  max-width:var(--max-w);
+  margin:0 auto;
+  padding:12px 20px;
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:6px 18px;
+}
+.hero-band li{
+  color:#fff;
+  font-size:13px;
+  font-weight:700;
+  display:flex;
+  align-items:center;
+  gap:8px;
+  line-height:1.5;
+}
+.hero-band li::before{
+  content:"";
+  width:8px;height:8px;
+  background:var(--brand);
+  flex-shrink:0;
+}
+@media(min-width:768px){
+  .hero-band ul{grid-template-columns:repeat(4,auto);justify-content:space-between;}
+}
+
+/* ============ 悩み ============ */
+.section-worry{background:var(--base);}
+.worry-list{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:10px;
+  margin-top:20px;
+}
+@media(min-width:640px){.worry-list{grid-template-columns:1fr 1fr;}}
+.worry-list li{
+  background:var(--white);
+  border:1px solid var(--line);
+  border-left:4px solid var(--steel);
+  padding:12px 16px;
+  font-weight:500;
+  line-height:1.6;
+}
+.worry-answer{
+  margin-top:26px;
+  font-size:clamp(15px,2.4vw,17px);
+  border-top:2px solid var(--charcoal);
+  padding-top:20px;
+}
+.worry-answer strong{color:var(--brand);}
+
+/* ============ 対応できること ============ */
+.service-grid{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:28px;
+  margin-top:24px;
+  align-items:start;
+}
+@media(min-width:860px){.service-grid{grid-template-columns:1.2fr .8fr;}}
+.service-item{
+  border-bottom:1px solid var(--line);
+  padding:16px 0;
+}
+.service-item:first-child{padding-top:0;}
+.service-item h3{margin-bottom:.3em;}
+.service-item h3::before{
+  content:"";
+  display:inline-block;
+  width:10px;height:10px;
+  background:var(--brand);
+  margin-right:10px;
+}
+.service-item p{margin:0;color:var(--ink);}
+.service-photo img{width:100%;border:1px solid var(--line);}
+.service-photo figcaption{
+  font-size:12px;
+  color:var(--steel);
+  padding-top:8px;
+  line-height:1.6;
+}
+
+/* ============ 品目 ============ */
+.section-items{background:var(--base);}
+.items-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:8px;
+  margin-top:20px;
+}
+@media(min-width:640px){.items-grid{grid-template-columns:repeat(4,1fr);}}
+@media(min-width:960px){.items-grid{grid-template-columns:repeat(5,1fr);}}
+.items-grid li{
+  background:var(--white);
+  border:1px solid var(--line);
+  padding:10px 12px;
+  text-align:center;
+  font-weight:700;
+  font-size:14px;
+  line-height:1.5;
+}
+.items-note{
+  margin-top:20px;
+  background:var(--white);
+  border:1px solid var(--line);
+  border-left:4px solid var(--brand);
+  padding:14px 18px;
+}
+.items-note p{margin:0;font-size:14px;line-height:1.8;}
+
+/* ============ 料金 ============ */
+.price-box{
+  margin-top:24px;
+  border:2px solid var(--charcoal);
+  background:var(--white);
+  padding:28px 20px;
+  text-align:center;
+}
+.price-label{
+  display:inline-block;
+  background:var(--charcoal);
+  color:#fff;
+  font-size:13px;
+  font-weight:700;
+  letter-spacing:.1em;
+  padding:4px 16px;
+  margin:0 0 14px;
+}
+.price-main{
+  display:flex;
+  flex-wrap:wrap;
+  align-items:baseline;
+  justify-content:center;
+  gap:8px 14px;
+  margin:0 0 12px;
+}
+.price-unit{font-size:clamp(16px,3vw,20px);font-weight:700;color:var(--charcoal);}
+.price-num{font-size:clamp(22px,4.5vw,30px);font-weight:700;color:var(--charcoal);}
+.price-num strong{
+  font-size:clamp(44px,9vw,68px);
+  font-weight:900;
+  color:var(--brand);
+  letter-spacing:.01em;
+  padding:0 4px;
+}
+.price-unit-note{
+  margin:0 0 14px;
+  font-size:12px;
+  font-weight:700;
+  color:var(--steel);
+  display:inline-block;
+  border:1px solid var(--line);
+  padding:3px 12px;
+}
+.price-caption{margin:0;font-size:13px;color:var(--steel);line-height:1.8;}
+.price-notes{margin-top:22px;border-top:1px solid var(--line);}
+.price-notes li{
+  border-bottom:1px solid var(--line);
+  padding:10px 4px 10px 26px;
+  font-size:14px;
+  position:relative;
+  line-height:1.7;
+}
+.price-notes li::before{
+  content:"";
+  position:absolute;
+  left:6px;top:1.05em;
+  width:10px;height:2px;
+  background:var(--brand);
+}
+.price-free{
+  margin-top:22px;
+  background:var(--brand-soft);
+  border-left:4px solid var(--brand);
+  padding:14px 18px;
+  font-size:15px;
+}
+
+/* ============ 事例 ============ */
+.section-case{background:var(--base);}
+.case-lead{color:var(--steel);font-size:14px;}
+.ba-card{
+  background:var(--white);
+  border:1px solid var(--line);
+  padding:24px 20px;
+  margin-top:24px;
+}
+.ba-card h3{
+  border-left:5px solid var(--brand);
+  padding-left:12px;
+}
+.ba-photos{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:16px;
+  margin:16px 0;
+}
+@media(min-width:640px){.ba-photos{grid-template-columns:1fr 1fr;}}
+.ba-photos figure{position:relative;}
+.ba-photos img{
+  width:100%;
+  aspect-ratio:4/5;
+  object-fit:cover;
+  border:1px solid var(--line);
+}
+.ba-tag{
+  position:absolute;
+  top:0;left:0;
+  z-index:1;
+  font-size:13px;
+  font-weight:900;
+  letter-spacing:.12em;
+  color:#fff;
+  padding:6px 18px;
+}
+.ba-before{background:var(--steel);}
+.ba-after{background:var(--brand);}
+.ba-desc{margin:0;font-size:14px;line-height:1.9;}
+.case-sub{
+  margin-top:40px;
+  border-left:5px solid var(--charcoal);
+  padding-left:12px;
+}
+.case-grid{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:18px;
+  margin-top:18px;
+}
+@media(min-width:640px){.case-grid{grid-template-columns:1fr 1fr;}}
+@media(min-width:960px){.case-grid{grid-template-columns:repeat(4,1fr);}}
+.case-item{
+  background:var(--white);
+  border:1px solid var(--line);
+}
+.case-item img{
+  width:100%;
+  aspect-ratio:4/3;
+  object-fit:cover;
+}
+.case-item figcaption{
+  font-size:13px;
+  line-height:1.7;
+  padding:12px 14px;
+}
+
+/* ============ 選ばれる理由 ============ */
+.reason-grid{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:0 32px;
+  margin-top:12px;
+}
+@media(min-width:640px){.reason-grid{grid-template-columns:1fr 1fr;}}
+@media(min-width:960px){.reason-grid{grid-template-columns:1fr 1fr 1fr;}}
+.reason-item{
+  border-top:2px solid var(--charcoal);
+  padding:18px 0 14px;
+}
+.reason-item h3{margin-bottom:.3em;}
+.reason-item p{margin:0;font-size:14px;color:var(--ink);}
+.reason-photo{margin-top:32px;}
+.reason-photo img{
+  width:100%;
+  max-height:420px;
+  object-fit:cover;
+  object-position:center 65%;
+  border:1px solid var(--line);
+}
+.reason-photo figcaption{
+  font-size:13px;
+  color:var(--steel);
+  padding-top:8px;
+}
+
+/* ============ 流れ ============ */
+.section-flow{background:var(--base);}
+.flow-list{
+  margin-top:24px;
+  display:grid;
+  gap:12px;
+}
+.flow-list li{
+  display:flex;
+  gap:16px;
+  background:var(--white);
+  border:1px solid var(--line);
+  padding:16px 18px;
+  align-items:flex-start;
+}
+.flow-num{
+  flex-shrink:0;
+  width:40px;height:40px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:var(--charcoal);
+  color:#fff;
+  font-weight:900;
+  font-size:18px;
+}
+.flow-list h3{margin:0 0 .2em;font-size:16px;}
+.flow-list p{margin:0;font-size:14px;color:var(--ink);}
+.flow-line-push{
+  margin-top:28px;
+  background:var(--white);
+  border:2px solid var(--line-green);
+  padding:20px;
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  justify-content:space-between;
+  gap:16px;
+}
+.flow-line-copy{margin:0;font-size:15px;}
+.flow-line-push .btn{flex:0 0 auto;min-width:220px;}
+@media(max-width:640px){.flow-line-push .btn{flex:1 1 100%;}}
+
+/* ============ エリア ============ */
+.area-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:8px;
+  margin-top:20px;
+}
+@media(min-width:640px){.area-grid{grid-template-columns:repeat(6,1fr);}}
+.area-grid li{
+  border:1px solid var(--line);
+  background:var(--base);
+  text-align:center;
+  padding:8px 4px;
+  font-size:14px;
+  font-weight:700;
+}
+.area-note{margin-top:18px;font-size:14px;color:var(--ink);}
+.area-hours{
+  font-size:15px;
+  border-left:4px solid var(--brand);
+  padding-left:12px;
+}
+.area-hours strong{font-size:1.1em;}
+
+/* ============ 会社情報 ============ */
+.section-company{background:var(--base);}
+.company-table{
+  width:100%;
+  border-collapse:collapse;
+  background:var(--white);
+  margin-top:20px;
+  border:1px solid var(--line);
+}
+.company-table th,.company-table td{
+  border-bottom:1px solid var(--line);
+  padding:13px 16px;
+  text-align:left;
+  font-size:14px;
+  line-height:1.7;
+  vertical-align:top;
+}
+.company-table th{
+  width:32%;
+  background:var(--base);
+  font-weight:700;
+  white-space:nowrap;
+}
+@media(max-width:480px){
+  .company-table th{width:38%;white-space:normal;}
+}
+.company-table a{color:var(--brand);font-weight:700;word-break:break-all;}
+.company-note{
+  margin-top:16px;
+  font-size:14px;
+  border-left:4px solid var(--charcoal);
+  padding-left:12px;
+  font-weight:700;
+}
+.company-qr{
+  margin-top:24px;
+  display:flex;
+  align-items:center;
+  gap:18px;
+  background:var(--white);
+  border:1px solid var(--line);
+  padding:16px 20px;
+  max-width:420px;
+}
+.company-qr img{width:88px;height:88px;flex-shrink:0;}
+.company-qr-text{margin:0;font-size:13px;line-height:1.7;color:var(--ink);}
+
+/* ============ FAQ ============ */
+.section-faq details{
+  border:1px solid var(--line);
+  border-left:4px solid var(--charcoal);
+  background:var(--white);
+  margin-top:10px;
+}
+.section-faq summary{
+  cursor:pointer;
+  list-style:none;
+  padding:15px 44px 15px 18px;
+  font-weight:700;
+  position:relative;
+  line-height:1.6;
+}
+.section-faq summary::-webkit-details-marker{display:none;}
+.section-faq summary::before{
+  content:"Q";
+  color:var(--brand);
+  font-weight:900;
+  margin-right:10px;
+}
+.section-faq summary::after{
+  content:"+";
+  position:absolute;
+  right:16px;top:50%;
+  transform:translateY(-50%);
+  font-size:22px;
+  font-weight:400;
+  color:var(--steel);
+}
+.section-faq details[open] summary::after{content:"−";}
+.section-faq details p{
+  margin:0;
+  padding:0 18px 16px;
+  font-size:14px;
+  color:var(--ink);
+  border-top:1px dashed var(--line);
+  padding-top:12px;
+}
+
+/* ============ 最終CTA ============ */
+.section-contact{
+  background:var(--charcoal);
+}
+.section-contact h2{color:#fff;}
+.contact-lead{color:#E3E7EA;font-size:15px;}
+.contact-buttons{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:14px;
+  margin-top:28px;
+}
+@media(min-width:860px){.contact-buttons{grid-template-columns:1fr 1fr 1fr;}}
+.contact-btn{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  gap:2px;
+  padding:20px 16px;
+  border-radius:var(--radius);
+  background:var(--white);
+  transition:opacity .15s ease, transform .1s ease;
+}
+.contact-btn:hover,.contact-btn:focus-visible{opacity:.88;}
+.contact-btn:active{transform:translateY(1px);}
+.contact-btn:focus-visible{outline:3px solid #fff;outline-offset:2px;}
+.contact-btn-label{
+  font-size:12px;
+  font-weight:700;
+  letter-spacing:.14em;
+  color:var(--steel);
+}
+.contact-btn-main{
+  font-size:clamp(17px,2.6vw,21px);
+  font-weight:900;
+  color:var(--charcoal);
+  line-height:1.4;
+  word-break:break-all;
+}
+.contact-btn-sub{font-size:12px;color:var(--steel);}
+.contact-btn-tel .contact-btn-main{font-size:clamp(22px,4vw,28px);}
+.contact-btn-line{background:var(--line-green);}
+.contact-btn-line .contact-btn-label,
+.contact-btn-line .contact-btn-sub{color:rgba(255,255,255,.85);}
+.contact-btn-line .contact-btn-main{color:#fff;}
+
+/* ============ フッター ============ */
+.site-footer{
+  background:#171B1F;
+  color:#B8BFC5;
+  text-align:center;
+  padding:28px 20px 32px;
+  font-size:12px;
+  line-height:1.8;
+}
+.site-footer p{margin:0;}
+.footer-copy{margin-top:6px;color:#7C848B;}
+
+/* ============ 固定CTA ============ */
+.fixed-cta{
+  position:fixed;
+  left:0;right:0;bottom:0;
+  z-index:100;
+  display:grid;
+  grid-template-columns:1.25fr 1.1fr .9fr;
+  gap:1px;
+  background:var(--line);
+  border-top:1px solid var(--line);
+  box-shadow:0 -2px 10px rgba(0,0,0,.12);
+}
+.fixed-btn{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:6px;
+  min-height:58px;
+  padding:8px 6px calc(8px + env(safe-area-inset-bottom, 0px));
+  background:var(--white);
+  transition:opacity .15s ease;
+}
+.fixed-btn:hover,.fixed-btn:focus-visible{opacity:.85;}
+.fixed-btn:focus-visible{outline:3px solid var(--brand);outline-offset:-3px;}
+.fixed-btn svg{flex-shrink:0;}
+.fixed-btn-body{display:flex;flex-direction:column;line-height:1.3;min-width:0;}
+.fixed-btn-label{font-size:13px;font-weight:900;white-space:nowrap;}
+.fixed-btn-sub{font-size:10px;white-space:nowrap;}
+.fixed-btn-tel{background:var(--charcoal);color:#fff;}
+.fixed-btn-line{background:var(--line-green);color:#fff;}
+.fixed-btn-mail{background:var(--white);color:var(--charcoal);}
+.fixed-btn-mail .fixed-btn-sub{color:var(--steel);}
+@media(min-width:960px){
+  body{padding-bottom:0;}
+  .fixed-cta{display:none;}
+}
+
+/* ============ QRモーダル（PC版LINE導線） ============ */
+.qr-modal[hidden]{display:none;}
+.qr-modal{
+  position:fixed;
+  inset:0;
+  z-index:200;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.qr-modal-overlay{
+  position:absolute;
+  inset:0;
+  background:rgba(20,23,26,.6);
+}
+.qr-modal-box{
+  position:relative;
+  z-index:1;
+  background:var(--white);
+  padding:36px 32px 30px;
+  max-width:320px;
+  width:calc(100% - 40px);
+  text-align:center;
+  box-shadow:0 8px 30px rgba(0,0,0,.25);
+}
+.qr-modal-close{
+  position:absolute;
+  top:8px;right:8px;
+  width:32px;height:32px;
+  border:none;
+  background:transparent;
+  font-size:22px;
+  line-height:1;
+  color:var(--steel);
+  cursor:pointer;
+}
+.qr-modal-close:hover,.qr-modal-close:focus-visible{color:var(--charcoal);}
+.qr-modal-box img{margin:0 auto 16px;width:180px;height:180px;}
+.qr-modal-title{margin:0 0 6px;font-size:16px;font-weight:700;color:var(--charcoal);}
+.qr-modal-sub{margin:0 0 18px;font-size:13px;color:var(--steel);line-height:1.7;}
+.qr-modal-direct{
+  display:inline-block;
+  font-size:13px;
+  color:var(--line-green);
+  font-weight:700;
+  border-bottom:1px solid currentColor;
+  padding-bottom:1px;
+}
+.qr-modal-direct:hover,.qr-modal-direct:focus-visible{opacity:.75;}
