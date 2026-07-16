@@ -348,15 +348,6 @@ figure{margin:0;}
   letter-spacing:.01em;
   padding:0 4px;
 }
-.price-unit-note{
-  margin:0 0 14px;
-  font-size:12px;
-  font-weight:700;
-  color:var(--steel);
-  display:inline-block;
-  border:1px solid var(--line);
-  padding:3px 12px;
-}
 .price-caption{margin:0;font-size:13px;color:var(--steel);line-height:1.8;}
 .price-notes{margin-top:22px;border-top:1px solid var(--line);}
 .price-notes li{
@@ -464,18 +455,36 @@ figure{margin:0;}
 }
 .reason-item h3{margin-bottom:.3em;}
 .reason-item p{margin:0;font-size:14px;color:var(--ink);}
-.reason-photo{margin-top:32px;}
-.reason-photo img{
-  width:100%;
-  max-height:420px;
-  object-fit:cover;
-  object-position:center 65%;
+.reason-photo{
+  position:relative;
+  margin-top:32px;
+  padding:22px;
+  overflow:hidden;
+  background:
+    linear-gradient(rgba(34,39,44,.18),rgba(34,39,44,.18)),
+    url("../assets/images/biz-kaishu/ginza-img-0149.webp") center/cover;
   border:1px solid var(--line);
 }
+.reason-photo::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  backdrop-filter:blur(10px);
+  background:rgba(255,255,255,.14);
+}
+.reason-photo img{
+  position:relative;
+  width:100%;
+  max-height:520px;
+  object-fit:contain;
+  filter:drop-shadow(0 10px 24px rgba(0,0,0,.25));
+}
 .reason-photo figcaption{
+  position:relative;
   font-size:13px;
-  color:var(--steel);
-  padding-top:8px;
+  color:#fff;
+  padding-top:10px;
+  text-shadow:0 1px 8px rgba(0,0,0,.4);
 }
 
 /* ============ 流れ ============ */
@@ -583,14 +592,34 @@ figure{margin:0;}
   margin-top:24px;
   display:flex;
   align-items:center;
-  gap:18px;
+  gap:20px;
   background:var(--white);
   border:1px solid var(--line);
-  padding:16px 20px;
-  max-width:420px;
+  padding:18px 20px;
 }
-.company-qr img{width:88px;height:88px;flex-shrink:0;}
+.company-qr img{width:120px;height:120px;flex-shrink:0;}
+.company-qr-body{display:flex;flex-direction:column;align-items:flex-start;gap:12px;}
 .company-qr-text{margin:0;font-size:13px;line-height:1.7;color:var(--ink);}
+.company-qr-button{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:42px;
+  padding:9px 18px;
+  background:var(--line-green);
+  color:#fff;
+  border-radius:var(--radius);
+  font-size:13px;
+  font-weight:700;
+  line-height:1.4;
+}
+.company-qr-button:hover,.company-qr-button:focus-visible{opacity:.85;}
+.company-qr-button:focus-visible{outline:3px solid var(--brand);outline-offset:2px;}
+@media(max-width:520px){
+  .company-qr{align-items:flex-start;flex-direction:column;}
+  .company-qr img{width:104px;height:104px;}
+  .company-qr-button{width:100%;}
+}
 
 /* ============ FAQ ============ */
 .section-faq details{
@@ -729,53 +758,3 @@ figure{margin:0;}
   body{padding-bottom:0;}
   .fixed-cta{display:none;}
 }
-
-/* ============ QRモーダル（PC版LINE導線） ============ */
-.qr-modal[hidden]{display:none;}
-.qr-modal{
-  position:fixed;
-  inset:0;
-  z-index:200;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-}
-.qr-modal-overlay{
-  position:absolute;
-  inset:0;
-  background:rgba(20,23,26,.6);
-}
-.qr-modal-box{
-  position:relative;
-  z-index:1;
-  background:var(--white);
-  padding:36px 32px 30px;
-  max-width:320px;
-  width:calc(100% - 40px);
-  text-align:center;
-  box-shadow:0 8px 30px rgba(0,0,0,.25);
-}
-.qr-modal-close{
-  position:absolute;
-  top:8px;right:8px;
-  width:32px;height:32px;
-  border:none;
-  background:transparent;
-  font-size:22px;
-  line-height:1;
-  color:var(--steel);
-  cursor:pointer;
-}
-.qr-modal-close:hover,.qr-modal-close:focus-visible{color:var(--charcoal);}
-.qr-modal-box img{margin:0 auto 16px;width:180px;height:180px;}
-.qr-modal-title{margin:0 0 6px;font-size:16px;font-weight:700;color:var(--charcoal);}
-.qr-modal-sub{margin:0 0 18px;font-size:13px;color:var(--steel);line-height:1.7;}
-.qr-modal-direct{
-  display:inline-block;
-  font-size:13px;
-  color:var(--line-green);
-  font-weight:700;
-  border-bottom:1px solid currentColor;
-  padding-bottom:1px;
-}
-.qr-modal-direct:hover,.qr-modal-direct:focus-visible{opacity:.75;}
