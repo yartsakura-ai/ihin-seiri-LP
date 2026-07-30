@@ -758,3 +758,22 @@ figure{margin:0;}
   body{padding-bottom:0;}
   .fixed-cta{display:none;}
 }
+
+
+.line-icon{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  flex:none;
+  min-width:2.2em;
+  height:1.45em;
+  padding:0 .38em;
+  border-radius:999px;
+  background:#fff;
+  color:#06C755;
+  font-size:.78em;
+  font-weight:900;
+  line-height:1;
+  letter-spacing:.02em;
+  box-shadow:0 1px 0 rgba(0,0,0,.08);
+}

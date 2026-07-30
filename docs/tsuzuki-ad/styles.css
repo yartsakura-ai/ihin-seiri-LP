@@ -149,7 +149,13 @@ ul,ol{margin:0;padding:0;list-style:none;}
   border-radius:50%;background:rgba(255,255,255,.22);color:#fff;font-weight:900;line-height:1;
 }
 .phone-icon svg{width:14px;height:14px;fill:currentColor;}
-.line-icon{font-size:.48rem;letter-spacing:-.02em;background:#fff;color:var(--green-line);}
+.line-icon{
+  display:inline-flex;align-items:center;justify-content:center;flex:none;
+  min-width:2.2em;height:1.45em;padding:0 .38em;border-radius:999px;
+  background:#fff;color:var(--green-line);font-size:.78em;font-weight:900;
+  line-height:1;letter-spacing:.02em;box-shadow:0 1px 0 rgba(0,0,0,.08);
+}
+.btn-icon.line-icon{flex:0 0 auto;width:auto;}
 
 /* ---------- ヒーロー ---------- */
 .hero{
@@ -234,6 +240,25 @@ ul,ol{margin:0;padding:0;list-style:none;}
 .price-link-sub::after{content:" ›";font-weight:900;}
 .hero-cta{display:flex;flex-wrap:wrap;gap:14px;margin-bottom:12px;}
 .hero-note{font-size:.82rem;color:var(--text-light);}
+
+/* 24時間受付中バッジ */
+.contact-hours-note{
+  display:flex;flex-wrap:wrap;align-items:center;gap:8px;
+  margin:0 0 10px;line-height:1.5;
+}
+.contact-badge{
+  display:inline-flex;align-items:center;flex:0 0 auto;
+  background:var(--gold-pale);color:var(--navy);border:1px solid var(--gold);
+  border-radius:999px;padding:4px 12px;font-size:.74rem;font-weight:700;
+  letter-spacing:.02em;white-space:nowrap;
+}
+.contact-hours-sub{font-size:.76rem;color:var(--text-light);}
+.contact-hours-note--dark{margin-top:14px;}
+.contact-hours-note--center{justify-content:center;margin:0 0 16px;}
+.contact-badge--dark{
+  background:rgba(255,255,255,.1);color:var(--gold-bright);border-color:var(--gold-bright);
+}
+.contact-hours-sub--dark{color:#AFC2DA;}
 
 /* ヒーロー下 帯 */
 .hero-strip{
@@ -420,6 +445,32 @@ ul,ol{margin:0;padding:0;list-style:none;}
   display:block;font-size:.8rem;color:var(--text-light);margin-top:.9em;
   padding-top:.9em;border-top:1px dashed var(--line);line-height:1.8;
 }
+.realty-note{
+  max-width:900px;margin:0 auto;text-align:left;
+  background:#fff;border:1px solid var(--line);border-radius:var(--radius);
+  padding:28px 32px;box-shadow:0 4px 14px rgba(27,58,102,.06);
+}
+.realty-note-head{display:flex;align-items:center;gap:12px;margin-bottom:14px;}
+.realty-note-icon{
+  flex:0 0 34px;width:34px;height:34px;border-radius:50%;
+  background:var(--gold-pale);color:var(--gold);
+  display:flex;align-items:center;justify-content:center;font-size:1rem;font-weight:900;
+}
+.realty-note h3{font-size:1.08rem;margin:0;color:var(--navy);}
+.realty-note p{font-size:.92rem;color:var(--text);margin:0 0 .9em;line-height:1.9;}
+.realty-note-points{
+  display:flex;flex-wrap:wrap;gap:10px;margin:18px 0 22px;list-style:none;padding:0;
+}
+.realty-note-points li{
+  position:relative;background:#fff;border:1px solid var(--gold);color:var(--navy);
+  font-size:.82rem;font-weight:700;padding:7px 14px 7px 26px;border-radius:20px;
+}
+.realty-note-points li::before{
+  content:"✓";position:absolute;left:10px;top:50%;transform:translateY(-50%);
+  color:var(--gold);font-weight:900;font-size:.78rem;
+}
+.realty-note-cta{text-align:center;}
+
 .price-note{max-width:760px;margin:28px auto 0;font-size:.92rem;color:var(--text-light);}
 .price-cta{
   background:linear-gradient(135deg,var(--navy) 0%,var(--navy-soft) 100%);
@@ -532,6 +583,40 @@ ul,ol{margin:0;padding:0;list-style:none;}
 .final-tel .tel-big{font-size:2rem;font-weight:900;color:#fff;letter-spacing:.03em;display:inline-block;}
 .final-tel .tel-caption{display:block;font-size:.82rem;color:#AFC2DA;margin-top:2px;}
 
+/* ---------- フォーム問い合わせ ---------- */
+.contact-form-sec{padding-top:56px;}
+.contact-form{
+  max-width:700px;margin:0 auto;background:#fff;border:1px solid var(--line);
+  border-radius:var(--radius);box-shadow:0 4px 20px rgba(27,58,102,.06);
+  padding:28px 26px;
+}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+.form-row{display:flex;flex-direction:column;gap:6px;min-width:0;}
+.form-row--full{grid-column:1/-1;}
+.form-row label,.form-group-label{font-size:.86rem;font-weight:700;color:var(--navy);}
+.form-row input,.form-row textarea{
+  border:1px solid var(--line);border-radius:8px;padding:12px 14px;
+  font-family:var(--sans);font-size:.94rem;color:var(--text);background:var(--cream);
+  min-height:48px;
+}
+.form-row textarea{min-height:auto;resize:vertical;}
+.form-row input:focus,.form-row textarea:focus{
+  outline:none;border-color:var(--gold);background:#fff;
+}
+.form-radio-group{display:flex;flex-wrap:wrap;gap:16px;}
+.form-radio{display:inline-flex;align-items:center;gap:6px;font-size:.9rem;color:var(--text);font-weight:400;}
+.form-honeypot{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden;}
+.form-line-tip{font-size:.84rem;color:var(--text-light);margin:18px 0 0;}
+.form-line-tip a{color:var(--gold);font-weight:700;}
+.form-submit{width:100%;margin-top:18px;}
+.form-note{font-size:.8rem;color:var(--text-light);text-align:center;margin:12px 0 0;}
+.form-status{
+  margin:14px 0 0;padding:12px 16px;border-radius:8px;
+  background:var(--gold-pale);color:var(--navy);font-size:.88rem;font-weight:700;
+  text-align:center;line-height:1.6;
+}
+.form-status[hidden]{display:none;}
+
 /* ---------- 会社情報 ---------- */
 .company-table{
   max-width:700px;margin:0 auto;border:1px solid var(--line);border-radius:var(--radius);
@@ -575,11 +660,11 @@ ul,ol{margin:0;padding:0;list-style:none;}
 @media (max-width:640px){
   .sec{padding:54px 0;scroll-margin-top:70px;}
   .sec-head h2{font-size:1.32rem;}
-  .header-inner{position:relative;padding:10px 108px 10px 12px;gap:8px;}
-  .header-cta{position:absolute;left:calc(min(100vw, 390px) - 96px);top:50%;transform:translateY(-50%);gap:6px;margin-left:0;}
+  .header-inner{position:relative;padding:10px 98px 10px 12px;gap:8px;}
+  .header-cta{position:absolute;right:8px;top:50%;transform:translateY(-50%);gap:5px;margin-left:0;}
   .header-tel{display:none;}
-  .header-cta .btn-sm{padding:8px;font-size:.72rem;white-space:nowrap;}
-  .header-btn{width:42px;min-width:42px;height:38px;gap:0;}
+  .header-cta .btn-sm{padding:7px;font-size:.72rem;white-space:nowrap;}
+  .header-btn{width:40px;min-width:40px;height:38px;gap:0;}
   .header-btn .btn-text{display:none;}
   .btn-icon{flex-basis:20px;width:20px;height:20px;}
   .brand .brand-area{display:none;}
@@ -605,6 +690,8 @@ ul,ol{margin:0;padding:0;list-style:none;}
   .price-link-main{font-size:1.03rem;}
   .hero-cta{flex-direction:column;gap:10px;margin-bottom:8px;}
   .hero-cta .btn{width:100%;padding:15px 20px;}
+  .contact-hours-note{justify-content:center;text-align:center;margin-bottom:8px;}
+  .contact-hours-note--dark{justify-content:center;text-align:center;}
   .strip-inner{grid-template-columns:1fr 1fr 1fr;padding:12px 10px;gap:4px;}
   .strip-item{padding:2px 4px;}
   .strip-item .strip-label{font-size:.62rem;}
@@ -617,6 +704,10 @@ ul,ol{margin:0;padding:0;list-style:none;}
   .trust-badge-icon{flex-basis:20px;width:20px;height:20px;font-size:.68rem;}
   .can-grid{grid-template-columns:1fr;}
   .price-grid{grid-template-columns:1fr;}
+  .contact-form-sec{padding-top:40px;}
+  .contact-form{padding:22px 18px;}
+  .form-grid{grid-template-columns:1fr;gap:14px;}
+  .form-row input,.form-row textarea{font-size:16px;}
   .price-card .price-now{font-size:1.6rem;}
   .price-card--campaign::before{
     top:9px;right:-30px;padding:2px 30px;font-size:.6rem;letter-spacing:.04em;

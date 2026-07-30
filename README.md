@@ -50,7 +50,10 @@ Repository Settings
 
 `docs/biz-kaishu/` に、リサイクルショップ・店舗・倉庫などの事業者向けに、売れ残り在庫や什器の有料回収を案内する広告LPを追加しました。
 
-- 公開予定URL: https://yartsakura-ai.github.io/ihin-seiri-LP/biz-kaishu/
+- 仮公開URL: https://yartsakura-ai.github.io/ihin-seiri-LP/biz-kaishu/
 - 画像: `docs/assets/images/biz-kaishu/`（モザイク処理済みWebP。処理内容は同フォルダの `IMAGE-MANIFEST.md` を参照）
 - 問い合わせ導線: 電話・LINE・メール（メールは `y.artsakura@gmail.com`、独自ドメイン取得後に変更予定）
-- ステータス: 試作段階のため `noindex,nofollow` を設定中。回収サービス関連の許認可情報は正式確認が取れるまでHTMLコメントとして非表示にしています。
+- ステータス: GitHub Pagesで仮公開中。試作段階のため `noindex,nofollow` を設定中。
+- 許認可表示: 古物商許可証番号は `451930009599号` を掲載。産業廃棄物収集運搬業許可番号は、正式番号確認後に追記する前提で `正式番号確認後に記載` と表示。
+- 料金目安: 1立米あたり税込10,000円を基本に、品目・物量・搬出状況で案内。少量回収は物量に応じて算出し、現地訪問時の運搬費は事前案内。
+- 正式公開前の確認: 産業廃棄物収集運搬業許可番号を正式番号へ差し替え、検索流入を開始する場合は `noindex,nofollow` を解除する。

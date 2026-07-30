@@ -110,5 +110,5 @@ echo '<!DOCTYPE html><html lang="ja"><head><meta charset="UTF-8">';
 echo '<meta name="viewport" content="width=device-width, initial-scale=1.0">';
 echo '<title>送信エラー｜株式会社アートさくら</title></head><body style="font-family:sans-serif;padding:40px 20px;max-width:520px;margin:0 auto;line-height:1.8;">';
 echo '<h1 style="font-size:1.2rem;">送信に失敗しました</h1>';
-echo '<p>恐れ入りますが、お電話（045-482-6608）にてご連絡ください。</p>';
+echo '<p>恐れ入りますが、お電話（0120-007-368）にてご連絡ください。</p>';
 echo '</body></html>';
