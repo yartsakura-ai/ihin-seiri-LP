@@ -1,7 +1,7 @@
 /* =========================================================
-   驛ｽ遲大玄 驕ｺ蜩∵紛逅・蠎・相LP・・suzuki-ad・・
-   繝医・繝ｳ: 逋ｽ ﾃ・邏ｺ ﾃ・驥・+ 繧・ｏ繧峨°縺・・繧九＆・医け繝ｪ繝ｼ繝・・
-   逕溷燕謨ｴ逅・P縺ｮ螳牙ｿ・─ ﾃ・驕ｺ蜩∵紛逅・P縺ｮ蜊ｳ蠢懈ｧ
+   横浜市青葉区 遺品整理・実家片付けLP（aoba）
+   都筑区版（tsuzuki）をベースに作成
+   トーン: 白 × 紺 × 金 + やわらかい明るさ（クリーム）
    ========================================================= */
 :root{
   --navy:#1B3A66;
@@ -39,7 +39,7 @@ ul,ol{margin:0;padding:0;list-style:none;}
 
 .inner{max-width:var(--max-w);margin:0 auto;padding:0 22px;}
 
-/* ---------- 繝懊ち繝ｳ ---------- */
+/* ---------- ボタン ---------- */
 .btn{
   position:relative;overflow:hidden;isolation:isolate;
   display:inline-flex;align-items:center;justify-content:center;gap:8px;
@@ -92,7 +92,7 @@ ul,ol{margin:0;padding:0;list-style:none;}
 .btn-lg{padding:18px 34px;font-size:1.08rem;}
 .btn-sm{padding:9px 16px;font-size:.85rem;}
 
-/* ---------- 繧ｻ繧ｯ繧ｷ繝ｧ繝ｳ蜈ｱ騾・---------- */
+/* ---------- セクション共通 ---------- */
 .sec{padding:72px 0;scroll-margin-top:86px;}
 .sec-cream{background:var(--cream);}
 .sec-gray{background:var(--base-gray);}
@@ -117,7 +117,7 @@ ul,ol{margin:0;padding:0;list-style:none;}
   padding:6px 14px;border-radius:20px;
 }
 
-/* ---------- 繝倥ャ繝繝ｼ ---------- */
+/* ---------- ヘッダー ---------- */
 .site-header{
   position:sticky;top:0;z-index:100;background:var(--navy-deep);
   border-bottom:1px solid rgba(255,255,255,.14);box-shadow:0 8px 24px rgba(18,41,74,.18);
@@ -157,7 +157,7 @@ ul,ol{margin:0;padding:0;list-style:none;}
 }
 .btn-icon.line-icon{flex:0 0 auto;width:auto;}
 
-/* ---------- 荳榊ｮ牙挨繧ｷ繝ｧ繝ｼ繝医き繝・ヨ繝舌リ繝ｼ ---------- */
+/* ---------- 不安別ショートカットバナー ---------- */
 .concern-shortcuts{
   background:#fff;border-bottom:1px solid var(--line);
   padding:14px 0;
@@ -186,7 +186,7 @@ ul,ol{margin:0;padding:0;list-style:none;}
   font-size:.76rem;color:var(--text-light);margin:0;
 }
 
-/* ---------- 繝偵・繝ｭ繝ｼ ---------- */
+/* ---------- ヒーロー ---------- */
 .hero{
   position:relative;overflow:hidden;background:var(--cream);
 }
@@ -266,11 +266,11 @@ ul,ol{margin:0;padding:0;list-style:none;}
 .price-link-label{font-size:.72rem;font-weight:700;color:var(--text-light);line-height:1.4;}
 .price-link-main{font-size:1.08rem;font-weight:900;color:var(--navy);line-height:1.35;letter-spacing:.01em;}
 .price-link-sub{font-size:.8rem;font-weight:800;color:var(--gold);line-height:1.35;}
-.price-link-sub::after{content:" \203A";font-weight:900;}
+.price-link-sub::after{content:" ›";font-weight:900;}
 .hero-cta{display:flex;flex-wrap:wrap;gap:14px;margin-bottom:12px;}
 .hero-note{font-size:.82rem;color:var(--text-light);}
 
-/* 24譎る俣蜿嶺ｻ倅ｸｭ繝舌ャ繧ｸ */
+/* 24時間受付中バッジ */
 .contact-hours-note{
   display:flex;flex-wrap:wrap;align-items:center;gap:8px;
   margin:0 0 10px;line-height:1.5;
@@ -289,7 +289,7 @@ ul,ol{margin:0;padding:0;list-style:none;}
 }
 .contact-hours-sub--dark{color:#AFC2DA;}
 
-/* 繝偵・繝ｭ繝ｼ荳・蟶ｯ */
+/* ヒーロー下 帯 */
 .hero-strip{
   position:relative;z-index:2;background:var(--navy);
 }
@@ -303,7 +303,7 @@ ul,ol{margin:0;padding:0;list-style:none;}
 .strip-item .strip-value{font-weight:900;font-size:1rem;color:#fff;}
 .strip-item .strip-value .gold{color:var(--gold-bright);}
 
-/* 菫｡鬆ｼ繝舌ャ繧ｸ */
+/* 信頼バッジ */
 .trust-badges{
   position:relative;z-index:2;background:var(--cream);
   padding:22px 0 6px;
@@ -327,7 +327,7 @@ ul,ol{margin:0;padding:0;list-style:none;}
 }
 .badge-text-short{display:none;}
 
-/* ---------- 繧医￥縺ゅｋ謔ｩ縺ｿ ---------- */
+/* ---------- よくある悩み ---------- */
 .fit-list{max-width:760px;margin:0 auto;display:grid;gap:12px;}
 .fit-list li{
   background:#fff;border:1px solid var(--line);border-radius:var(--radius);
@@ -344,7 +344,7 @@ ul,ol{margin:0;padding:0;list-style:none;}
 .fit-cta{text-align:center;margin-top:24px;}
 .nobr{white-space:nowrap;}
 
-/* 逶ｸ隲・｢ｨ譎ｯ繝舌Φ繝会ｼ磯□譁ｹ繝ｻ遶九■莨壹＞縺ｪ縺暦ｼ・*/
+/* 相談風景バンド（遠方・立ち会いなし） */
 .consult-band{
   display:grid;grid-template-columns:6fr 6fr;gap:40px;align-items:center;
   background:#fff;border:1px solid var(--line);border-radius:var(--radius);
@@ -354,7 +354,7 @@ ul,ol{margin:0;padding:0;list-style:none;}
 .consult-band h3{font-family:var(--serif);font-size:1.2rem;}
 .consult-band p{font-size:.94rem;color:var(--text);margin-bottom:.6em;}
 
-/* ---------- 縺ｧ縺阪ｋ縺薙→ ---------- */
+/* ---------- できること ---------- */
 .can-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
 .can-item{
   background:#fff;border:1px solid var(--line);border-radius:var(--radius);
@@ -367,7 +367,7 @@ ul,ol{margin:0;padding:0;list-style:none;}
 .can-item h3{font-size:1.02rem;margin:6px 0 8px;}
 .can-item p{font-size:.88rem;color:var(--text-light);margin:0;}
 
-/* 莉募・縺大・逵溘ヰ繝ｳ繝・*/
+/* 仕分け写真バンド */
 .sorting-band{
   display:grid;grid-template-columns:6fr 6fr;gap:40px;align-items:center;
   margin-top:36px;
@@ -376,7 +376,7 @@ ul,ol{margin:0;padding:0;list-style:none;}
 .sorting-band h3{font-family:var(--serif);font-size:1.2rem;}
 .sorting-band p{font-size:.94rem;color:var(--text);}
 
-/* ---------- 雋ｷ蜿悶・繝ｪ繝ｦ繝ｼ繧ｹ ---------- */
+/* ---------- 買取・リユース ---------- */
 .reuse-wrap{display:grid;grid-template-columns:6fr 6fr;gap:40px;align-items:center;}
 .reuse-photo img{border-radius:var(--radius);box-shadow:0 16px 36px rgba(27,58,102,.14);}
 .reuse-copy p{font-size:.96rem;}
@@ -386,7 +386,7 @@ ul,ol{margin:0;padding:0;list-style:none;}
   margin:1.2em 0;font-size:.96rem;
 }
 
-/* ---------- 菴懈･ｭ蝣ｴ ---------- */
+/* ---------- 作業場 ---------- */
 .workshop-wrap{
   display:grid;grid-template-columns:1fr;gap:28px;align-items:start;
   max-width:980px;margin:0 auto;
@@ -409,10 +409,10 @@ ul,ol{margin:0;padding:0;list-style:none;}
 }
 .workshop-points li:last-child{border-bottom:none;}
 .workshop-points li::before{
-  content:"\2713";position:absolute;left:0;top:9px;color:var(--gold-bright);font-weight:900;
+  content:"✓";position:absolute;left:0;top:9px;color:var(--gold-bright);font-weight:900;
 }
 
-/* ---------- 譁咎≡ ---------- */
+/* ---------- 料金 ---------- */
 .price-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
 .price-card{
   background:#fff;border:1px solid var(--line);border-radius:var(--radius);
@@ -430,7 +430,7 @@ ul,ol{margin:0;padding:0;list-style:none;}
 .price-card .price-now .unit{font-size:.92rem;font-weight:700;color:var(--text-light);margin-left:2px;}
 .price-card--campaign{border-color:var(--gold);}
 .price-card--campaign::before{
-  content:"\30AD\30E3\30F3\30DA\30FC\30F3";position:absolute;top:10px;right:-32px;transform:rotate(38deg);
+  content:"キャンペーン";position:absolute;top:10px;right:-32px;transform:rotate(38deg);
   background:var(--gold);color:#fff;font-size:.66rem;font-weight:700;
   padding:3px 38px;letter-spacing:.08em;
 }
@@ -452,7 +452,7 @@ ul,ol{margin:0;padding:0;list-style:none;}
 }
 .price-flow-steps li::before{content:counter(pflow) ". ";color:var(--gold);}
 .price-flow-steps li:not(:last-child)::after{
-  content:"\203A";position:absolute;right:-19px;top:50%;transform:translateY(-50%);
+  content:"›";position:absolute;right:-19px;top:50%;transform:translateY(-50%);
   color:var(--gold);font-weight:900;font-size:1.1rem;
 }
 
@@ -495,7 +495,7 @@ ul,ol{margin:0;padding:0;list-style:none;}
   font-size:.82rem;font-weight:700;padding:7px 14px 7px 26px;border-radius:20px;
 }
 .realty-note-points li::before{
-  content:"\2713";position:absolute;left:10px;top:50%;transform:translateY(-50%);
+  content:"✓";position:absolute;left:10px;top:50%;transform:translateY(-50%);
   color:var(--gold);font-weight:900;font-size:.78rem;
 }
 .realty-note-cta{text-align:center;}
@@ -515,9 +515,9 @@ ul,ol{margin:0;padding:0;list-style:none;}
 .photo-examples-title{font-size:.92rem;font-weight:700;color:#fff;margin-bottom:10px;text-align:center;}
 .photo-examples ul{display:grid;gap:8px;}
 .photo-examples li{position:relative;padding-left:22px;font-size:.85rem;color:#D9E2EE;}
-.photo-examples li::before{content:"\2713";position:absolute;left:0;top:0;color:var(--gold-bright);font-weight:900;}
+.photo-examples li::before{content:"✓";position:absolute;left:0;top:0;color:var(--gold-bright);font-weight:900;}
 
-/* ---------- 菴懈･ｭ縺ｮ豬√ｌ ---------- */
+/* ---------- 作業の流れ ---------- */
 .flow-steps{max-width:720px;margin:0 auto;counter-reset:flow;}
 .flow-item{
   display:flex;gap:20px;padding:20px 0;border-bottom:1px solid var(--line);
@@ -533,7 +533,7 @@ ul,ol{margin:0;padding:0;list-style:none;}
 .flow-item h3{font-size:1.02rem;margin-bottom:4px;}
 .flow-item p{font-size:.9rem;color:var(--text-light);margin:0;}
 
-/* ---------- 蟇ｾ蠢懊お繝ｪ繧｢ ---------- */
+/* ---------- 対応エリア ---------- */
 .area-copy{max-width:700px;margin:0 auto 20px;text-align:center;font-size:.96rem;color:var(--text);}
 .area-chips{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;max-width:760px;margin:0 auto;}
 .area-chips li{
@@ -541,7 +541,7 @@ ul,ol{margin:0;padding:0;list-style:none;}
   font-size:.88rem;font-weight:700;padding:7px 18px;border-radius:20px;
 }
 
-/* ---------- 驕ｸ縺ｰ繧後ｋ逅・罰 ---------- */
+/* ---------- 選ばれる理由 ---------- */
 .why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
 .why-card{
   background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:26px 22px;
@@ -552,7 +552,7 @@ ul,ol{margin:0;padding:0;list-style:none;}
 .why-card h3{font-size:1.02rem;margin-bottom:8px;}
 .why-card p{font-size:.88rem;color:var(--text-light);margin:0;}
 
-/* ---------- 縺雁ｮ｢讒倥・螢ｰ ---------- */
+/* ---------- お客様の声 ---------- */
 .voice-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
 .voice-card{
   background:#fff;border:1px solid var(--line);border-radius:var(--radius);
@@ -579,10 +579,10 @@ ul,ol{margin:0;padding:0;list-style:none;}
 .faq-item summary::after{
   content:"+";position:absolute;right:0;top:0;color:var(--gold);font-size:1.3rem;line-height:1.4;
 }
-.faq-item[open] summary::after{content:"\2212";}
+.faq-item[open] summary::after{content:"−";}
 .faq-item p{margin:.8em 0 0 32px;font-size:.93rem;color:var(--text-light);}
 
-/* ---------- 譛邨・TA ---------- */
+/* ---------- 最終CTA ---------- */
 .final-cta{
   background:linear-gradient(135deg,var(--navy-deep) 0%,var(--navy-soft) 100%);
   color:#fff;text-align:center;padding:76px 0;position:relative;overflow:hidden;
@@ -612,7 +612,7 @@ ul,ol{margin:0;padding:0;list-style:none;}
 .final-tel .tel-big{font-size:2rem;font-weight:900;color:#fff;letter-spacing:.03em;display:inline-block;}
 .final-tel .tel-caption{display:block;font-size:.82rem;color:#AFC2DA;margin-top:2px;}
 
-/* ---------- 繝輔か繝ｼ繝蝠上＞蜷医ｏ縺・---------- */
+/* ---------- フォーム問い合わせ ---------- */
 .contact-form-sec{padding-top:56px;}
 .contact-form{
   max-width:700px;margin:0 auto;background:#fff;border:1px solid var(--line);
@@ -629,7 +629,6 @@ ul,ol{margin:0;padding:0;list-style:none;}
 }
 .required{background:rgba(46,134,255,.12);color:var(--sky-dark);}
 .optional{background:#EEF2F7;color:var(--text-light);}
-.form-small-note{font-size:.82rem;color:var(--text-light);margin:8px 0 0;}
 .form-row input:not([type="radio"]):not([type="checkbox"]),.form-row textarea{
   border:1px solid var(--line);border-radius:8px;padding:12px 14px;
   font-family:var(--sans);font-size:.94rem;color:var(--text);background:var(--cream);
@@ -644,19 +643,14 @@ ul,ol{margin:0;padding:0;list-style:none;}
 .form-radio input[type="radio"]{
   width:auto;min-width:auto;min-height:auto;margin:0;flex:0 0 auto;accent-color:var(--sky);
 }
+.form-small-note{font-size:.82rem;color:var(--text-light);margin:8px 0 0;}
 .form-honeypot{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden;}
 .form-line-tip{font-size:.84rem;color:var(--text-light);margin:18px 0 0;}
 .form-line-tip a{color:var(--gold);font-weight:700;}
 .form-submit{width:100%;margin-top:18px;}
 .form-note{font-size:.8rem;color:var(--text-light);text-align:center;margin:12px 0 0;}
-.form-status{
-  margin:14px 0 0;padding:12px 16px;border-radius:8px;
-  background:var(--gold-pale);color:var(--navy);font-size:.88rem;font-weight:700;
-  text-align:center;line-height:1.6;
-}
-.form-status[hidden]{display:none;}
 
-/* ---------- 莨夂､ｾ諠・ｱ ---------- */
+/* ---------- 会社情報 ---------- */
 .company-table{
   max-width:700px;margin:0 auto;border:1px solid var(--line);border-radius:var(--radius);
   overflow:hidden;background:#fff;
@@ -671,11 +665,11 @@ ul,ol{margin:0;padding:0;list-style:none;}
 }
 .company-table dt:last-of-type,.company-table dd:last-of-type{border-bottom:none;}
 
-/* ---------- 繝輔ャ繧ｿ繝ｼ ---------- */
+/* ---------- フッター ---------- */
 .site-footer{background:var(--navy-deep);color:#93A7C1;padding:28px 0 40px;}
 .footer-inner{max-width:var(--max-w);margin:0 auto;padding:0 22px;font-size:.8rem;text-align:center;}
 
-/* ---------- 繝｢繝舌う繝ｫ蝗ｺ螳咾TA ---------- */
+/* ---------- モバイル固定CTA ---------- */
 .mobile-cta-bar{
   position:fixed;left:0;right:0;bottom:0;z-index:120;display:none;
   background:rgba(18,41,74,.97);padding:10px 12px;gap:10px;
@@ -684,7 +678,7 @@ ul,ol{margin:0;padding:0;list-style:none;}
 .mobile-cta-bar .btn{flex:1;padding:13px 8px;font-size:.9rem;border-radius:8px;min-height:48px;}
 
 /* =========================================================
-   繝ｬ繧ｹ繝昴Φ繧ｷ繝・
+   レスポンシブ
    ========================================================= */
 @media (max-width:960px){
   .can-grid{grid-template-columns:repeat(2,1fr);}
@@ -752,12 +746,7 @@ ul,ol{margin:0;padding:0;list-style:none;}
   .contact-form-sec{padding-top:40px;}
   .contact-form{padding:22px 18px;}
   .form-grid{grid-template-columns:1fr;gap:14px;}
-  .form-row input:not([type="radio"]):not([type="checkbox"]),.form-row textarea{font-size:16px;}
-  .form-radio-group{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;}
-  .form-radio{
-    justify-content:center;white-space:nowrap;border:1px solid var(--line);
-    border-radius:8px;padding:10px 8px;background:#fff;font-size:.9rem;
-  }
+  .form-row input,.form-row textarea{font-size:16px;}
   .price-card .price-now{font-size:1.6rem;}
   .price-card--campaign::before{
     top:9px;right:-30px;padding:2px 30px;font-size:.6rem;letter-spacing:.04em;
@@ -780,6 +769,5 @@ ul,ol{margin:0;padding:0;list-style:none;}
   .company-table dd{padding-top:4px;}
   body{padding-bottom:96px;}
   .mobile-cta-bar{display:flex;padding:7px 10px calc(7px + env(safe-area-inset-bottom));gap:8px;}
-  .mobile-cta-bar .btn{padding:10px 8px;font-size:.84rem;min-height:48px;white-space:nowrap;gap:4px;}
+  .mobile-cta-bar .btn{padding:10px 8px;font-size:.88rem;min-height:48px;}
 }
-

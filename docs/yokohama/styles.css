@@ -465,7 +465,7 @@ ul,ol{margin:0;padding:0;list-style:none;}
   .flow-onestop{grid-template-columns:1fr;}
   .onestop-gallery{grid-template-columns:1fr;gap:14px;}
   .onestop-gallery img{height:190px;}
-  .workshop-photo img{height:220px;}
+  .workshop-photo img{height:auto;object-fit:contain;}
   .price-card .price-now{font-size:1.6rem;}
   .case-images img{height:160px;}
   .company-table dl{grid-template-columns:1fr;}

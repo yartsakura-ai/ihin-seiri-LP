@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 define('MAIL_TO', 'info@artsakura1183.com');
 define('MAIL_FROM', 'info@artsakura1183.com');
-define('MAIL_SUBJECT', '【ARTさくら】都筑区広告LPから無料相談がありました');
+define('MAIL_SUBJECT', '【ARTさくら】遺品整理LPから無料相談がありました');
 define('THANKS_PAGE', 'thanks.html');
 define('FORM_PAGE', 'index.html');
 
@@ -51,6 +51,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') !== 'POST') {
     exit;
 }
 
+// Spam trap: normal visitors will not fill this hidden field.
 if (field('website') !== '') {
     header('Location: ' . THANKS_PAGE);
     exit;
@@ -110,13 +111,13 @@ $submittedAt = date('Y-m-d H:i:s');
 $remoteAddr = (string) ($_SERVER['REMOTE_ADDR'] ?? '');
 $referer = (string) ($_SERVER['HTTP_REFERER'] ?? '');
 
-$body = "都筑区広告LPより無料相談フォームが送信されました。\n\n";
+$body = "遺品整理LPより無料相談フォームが送信されました。\n\n";
 $body .= "送信日時: {$submittedAt}\n";
 $body .= "お名前: {$name}\n";
 $body .= "フリガナ: {$kana}\n";
 $body .= "電話番号: {$tel}\n";
 $body .= "メールアドレス: " . ($email !== '' ? $email : '未入力') . "\n";
-$body .= "ご住所または対応エリア: " . ($area !== '' ? $area : '未入力') . "\n";
+$body .= "対応エリア・住所の目安: " . ($area !== '' ? $area : '未入力') . "\n";
 $body .= "希望する連絡方法: {$contactMethod}\n\n";
 $body .= "ご相談内容:\n{$message}\n\n";
 $body .= "----\n";

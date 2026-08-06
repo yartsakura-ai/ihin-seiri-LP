@@ -1,0 +1,5 @@
+# Legacy column URL redirects for XServer / public_html.
+RedirectMatch 301 ^/column/tsuzuki-ihinseiri(?:/index\.html)?/?$ /column/yokohama-ihinseiri/
+RedirectMatch 301 ^/column/tsuzuki-seizenseiri(?:/index\.html)?/?$ /column/yokohama-seizenseiri/
+RedirectMatch 301 ^/columns/tsuzuki-ihinseiri-guide(?:/index\.html)?/?$ /column/yokohama-ihinseiri/
+RedirectMatch 301 ^/columns/tsuzuki-seizenseiri-guide(?:/index\.html)?/?$ /column/yokohama-seizenseiri/

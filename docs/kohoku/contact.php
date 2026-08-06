@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 define('MAIL_TO', 'info@artsakura1183.com');
 define('MAIL_FROM', 'info@artsakura1183.com');
-define('MAIL_SUBJECT', '【ARTさくら】都筑区広告LPから無料相談がありました');
+define('MAIL_SUBJECT', '【ARTさくら】港北区広告LPから無料相談がありました');
 define('THANKS_PAGE', 'thanks.html');
 define('FORM_PAGE', 'index.html');
 
@@ -110,7 +110,7 @@ $submittedAt = date('Y-m-d H:i:s');
 $remoteAddr = (string) ($_SERVER['REMOTE_ADDR'] ?? '');
 $referer = (string) ($_SERVER['HTTP_REFERER'] ?? '');
 
-$body = "都筑区広告LPより無料相談フォームが送信されました。\n\n";
+$body = "港北区広告LPより無料相談フォームが送信されました。\n\n";
 $body .= "送信日時: {$submittedAt}\n";
 $body .= "お名前: {$name}\n";
 $body .= "フリガナ: {$kana}\n";
