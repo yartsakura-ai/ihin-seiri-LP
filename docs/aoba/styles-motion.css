@@ -769,5 +769,5 @@ ul,ol{margin:0;padding:0;list-style:none;}
   .company-table dd{padding-top:4px;}
   body{padding-bottom:96px;}
   .mobile-cta-bar{display:flex;padding:7px 10px calc(7px + env(safe-area-inset-bottom));gap:8px;}
-  .mobile-cta-bar .btn{padding:10px 8px;font-size:.88rem;min-height:48px;}
+  .mobile-cta-bar .btn{padding:10px 8px;font-size:.84rem;min-height:48px;white-space:nowrap;gap:4px;}
 }
